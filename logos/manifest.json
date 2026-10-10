@@ -1,0 +1,420 @@
+{
+ "nordstromnordstromrack": {
+  "domain": "nordstrom.com",
+  "logo": "logos/nordstromnordstromrack.png"
+ },
+ "applepay": {
+  "domain": "apple.com",
+  "logo": "logos/applepay.png"
+ },
+ "macys": {
+  "domain": "macys.com",
+  "logo": "logos/macys.png"
+ },
+ "etsy": {
+  "domain": "etsy.com",
+  "logo": "logos/etsy.png"
+ },
+ "lululemon": {
+  "domain": "lululemon.com",
+  "logo": "logos/lululemon.png"
+ },
+ "freepeople": {
+  "domain": "freepeople.com",
+  "logo": "logos/freepeople.png"
+ },
+ "americanexpressvenuecollection": {
+  "domain": "americanexpress.com",
+  "logo": "logos/americanexpressvenuecollection.png"
+ },
+ "usgrandprixaustinqualifyingmerchandise": {
+  "domain": "circuitoftheamericas.com",
+  "logo": "logos/usgrandprixaustinqualifyingmerchandise.png"
+ },
+ "nflsundayticketonyoutubeyoutubetv": {
+  "domain": "tv.youtube.com",
+  "logo": "logos/nflsundayticketonyoutubeyoutubetv.png"
+ },
+ "ourawellnesstechnology": {
+  "domain": "ouraring.com",
+  "logo": "logos/ourawellnesstechnology.png"
+ },
+ "airbnbexperiencesandservices": {
+  "domain": "airbnb.com",
+  "logo": "logos/airbnbexperiencesandservices.png"
+ },
+ "mujiapparelhouseholdgoodsstationeryandmore": {
+  "domain": "muji.us",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "sportsmanswarehouse": {
+  "domain": "sportsmans.com",
+  "logo": "logos/sportsmanswarehouse.png"
+ },
+ "dysoncom": {
+  "domain": "dyson.com",
+  "logo": "logos/dysoncom.png"
+ },
+ "thriftbookscom": {
+  "domain": "thriftbooks.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "hbomaxannualsubscription": {
+  "domain": "hbomax.com",
+  "logo": "logos/hbomaxannualsubscription.png"
+ },
+ "iherbcom": {
+  "domain": "iherb.com",
+  "logo": "logos/iherbcom.png"
+ },
+ "functionhealthaccessto160labtestsmri": {
+  "domain": "functionhealth.com",
+  "logo": "logos/functionhealthaccessto160labtestsmri.png"
+ },
+ "tnuckcomtuckernuck": {
+  "domain": "tnuck.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "deltagiftcards": {
+  "domain": "delta.com",
+  "logo": "logos/deltagiftcards.png"
+ },
+ "puracom": {
+  "domain": "pura.com",
+  "logo": "logos/puracom.png"
+ },
+ "turocarrentalmarketplace": {
+  "domain": "turo.com",
+  "logo": null,
+  "note": "generic icon"
+ },
+ "cozyearthbeddingandloungewear": {
+  "domain": "cozyearth.com",
+  "logo": "logos/cozyearthbeddingandloungewear.png"
+ },
+ "hyattresortsselectuscaribbeanlatinamerica": {
+  "domain": "hyatt.com",
+  "logo": "logos/hyattresortsselectuscaribbeanlatinamerica.png"
+ },
+ "bbccomannualsubscription": {
+  "domain": "bbc.com",
+  "logo": "logos/bbccomannualsubscription.png"
+ },
+ "spirithalloween": {
+  "domain": "spirithalloween.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "fanaticscomsportsappareljerseyshatsfangearandmore": {
+  "domain": "fanatics.com",
+  "logo": "logos/fanaticscomsportsappareljerseyshatsfangearandmore.png"
+ },
+ "dropbox": {
+  "domain": "dropbox.com",
+  "logo": "logos/dropbox.png"
+ },
+ "telefloraflowersarrangeddeliveredbylocalflorists": {
+  "domain": "teleflora.com",
+  "logo": "logos/telefloraflowersarrangeddeliveredbylocalflorists.png"
+ },
+ "rugsusacom": {
+  "domain": "rugsusa.com",
+  "logo": "logos/rugsusacom.png"
+ },
+ "nflshopcomtheofficialonlineshopofthenfl": {
+  "domain": "nflshop.com",
+  "logo": "logos/nflshopcomtheofficialonlineshopofthenfl.png"
+ },
+ "zenniprescriptioneyewear": {
+  "domain": "zennioptical.com",
+  "logo": "logos/zenniprescriptioneyewear.png"
+ },
+ "llbean": {
+  "domain": "llbean.com",
+  "logo": "logos/llbean.png"
+ },
+ "patagoniacom": {
+  "domain": "patagonia.com",
+  "logo": "logos/patagoniacom.png"
+ },
+ "benihana": {
+  "domain": "benihana.com",
+  "logo": "logos/benihana.png"
+ },
+ "vuoriperformanceapparel": {
+  "domain": "vuoriclothing.com",
+  "logo": "logos/vuoriperformanceapparel.png"
+ },
+ "revolve": {
+  "domain": "revolve.com",
+  "logo": "logos/revolve.png"
+ },
+ "kuhlcom": {
+  "domain": "kuhl.com",
+  "logo": "logos/kuhlcom.png"
+ },
+ "scheelssportinggoodsclothingandfootwear": {
+  "domain": "scheels.com",
+  "logo": "logos/scheelssportinggoodsclothingandfootwear.png"
+ },
+ "tecovas": {
+  "domain": "tecovas.com",
+  "logo": "logos/tecovas.png"
+ },
+ "lenscrafters": {
+  "domain": "lenscrafters.com",
+  "logo": "logos/lenscrafters.png"
+ },
+ "crackerbarrel": {
+  "domain": "crackerbarrel.com",
+  "logo": "logos/crackerbarrel.png"
+ },
+ "openfarmpetcom": {
+  "domain": "openfarmpet.com",
+  "logo": null,
+  "note": "generic icon"
+ },
+ "auracomonlinesafety": {
+  "domain": "aura.com",
+  "logo": "logos/auracomonlinesafety.png"
+ },
+ "constantcontactdigitalemailmarketingplatform": {
+  "domain": "constantcontact.com",
+  "logo": "logos/constantcontactdigitalemailmarketingplatform.png"
+ },
+ "ugg": {
+  "domain": "ugg.com",
+  "logo": "logos/ugg.png"
+ },
+ "crocscomclogssandalssneakersjibbitz": {
+  "domain": "crocs.com",
+  "logo": "logos/crocscomclogssandalssneakersjibbitz.png"
+ },
+ "dishnetwork": {
+  "domain": "dish.com",
+  "logo": "logos/dishnetwork.png"
+ },
+ "samedelmanwomensfashion": {
+  "domain": "samedelman.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "tonalsmarthomegym": {
+  "domain": "tonal.com",
+  "logo": null,
+  "note": "32px, unclear"
+ },
+ "americanhomeshieldhomewarranty": {
+  "domain": "ahs.com",
+  "logo": null,
+  "note": "blurry"
+ },
+ "stevemaddencom": {
+  "domain": "stevemadden.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "fragrancecom": {
+  "domain": "fragrance.com",
+  "logo": null,
+  "note": "16px only"
+ },
+ "hugoboss": {
+  "domain": "hugoboss.com",
+  "logo": "logos/hugoboss.png"
+ },
+ "fubo": {
+  "domain": "fubo.tv",
+  "logo": "logos/fubo.png"
+ },
+ "oakley": {
+  "domain": "oakley.com",
+  "logo": "logos/oakley.png"
+ },
+ "pandoranet": {
+  "domain": "pandora.net",
+  "logo": "logos/pandoranet.png"
+ },
+ "eddiebauercom": {
+  "domain": "eddiebauer.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "mgmstreaming": {
+  "domain": "mgmplus.com",
+  "logo": "logos/mgmstreaming.png"
+ },
+ "ancestryfamilyhistory": {
+  "domain": "ancestry.com",
+  "logo": "logos/ancestryfamilyhistory.png"
+ },
+ "burberry": {
+  "domain": "burberry.com",
+  "logo": "logos/burberry.png"
+ },
+ "prettylittercom": {
+  "domain": "prettylitter.com",
+  "logo": "logos/prettylittercom.png"
+ },
+ "underarmour": {
+  "domain": "underarmour.com",
+  "logo": "logos/underarmour.png"
+ },
+ "kiwicocom": {
+  "domain": "kiwico.com",
+  "logo": "logos/kiwicocom.png"
+ },
+ "frankandeileencom": {
+  "domain": "frankandeileen.com",
+  "logo": "logos/frankandeileencom.png"
+ },
+ "charlestyrwhittmensshirts": {
+  "domain": "charlestyrwhitt.com",
+  "logo": "logos/charlestyrwhittmensshirts.png"
+ },
+ "xerocomaccountingpayrollpaymentsforsmallbusiness": {
+  "domain": "xero.com",
+  "logo": "logos/xerocomaccountingpayrollpaymentsforsmallbusiness.png"
+ },
+ "hardrockhotelnewyork": {
+  "domain": "hardrockhotels.com",
+  "logo": "logos/hardrockhotelnewyork.png"
+ },
+ "nordictrack": {
+  "domain": "nordictrack.com",
+  "logo": "logos/nordictrack.png"
+ },
+ "fwrdcomluxuryapparel": {
+  "domain": "fwrd.com",
+  "logo": "logos/fwrdcomluxuryapparel.png"
+ },
+ "surlatable": {
+  "domain": "surlatable.com",
+  "logo": "logos/surlatable.png"
+ },
+ "superduolingoannualsubscription": {
+  "domain": "duolingo.com",
+  "logo": "logos/superduolingoannualsubscription.png"
+ },
+ "wineinsiderswinesdeliveredtoyourdoor": {
+  "domain": "wineinsiders.com",
+  "logo": null,
+  "note": "generic arrow"
+ },
+ "nothingbundtcakes": {
+  "domain": "nothingbundtcakes.com",
+  "logo": "logos/nothingbundtcakes.png"
+ },
+ "nhlshopnhlapparelhockeygeargiftsandmore": {
+  "domain": "shop.nhl.com",
+  "logo": "logos/nhlshopnhlapparelhockeygeargiftsandmore.png"
+ },
+ "megaseatscomlivemusicsportsevents": {
+  "domain": "megaseats.com",
+  "logo": "logos/megaseatscomlivemusicsportsevents.png"
+ },
+ "canoncom": {
+  "domain": "usa.canon.com",
+  "logo": "logos/canoncom.png"
+ },
+ "olliesbargainoutlet": {
+  "domain": "ollies.us",
+  "logo": "logos/olliesbargainoutlet.png"
+ },
+ "selectbestwesternsurestayhotelsuscanada": {
+  "domain": "bestwestern.com",
+  "logo": "logos/selectbestwesternsurestayhotelsuscanada.png"
+ },
+ "carhartt": {
+  "domain": "carhartt.com",
+  "logo": "logos/carhartt.png"
+ },
+ "kohlercom": {
+  "domain": "kohler.com",
+  "logo": null,
+  "note": "16px only"
+ },
+ "eltamdcom": {
+  "domain": "eltamd.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "luxuryescapes": {
+  "domain": "luxuryescapes.com",
+  "logo": "logos/luxuryescapes.png"
+ },
+ "legalzoomlegalservices": {
+  "domain": "legalzoom.com",
+  "logo": "logos/legalzoomlegalservices.png"
+ },
+ "cecredcom": {
+  "domain": "cecred.com",
+  "logo": "logos/cecredcom.png"
+ },
+ "ponantexplorationsluxuryvoyagesglobaldestinations": {
+  "domain": "ponant.com",
+  "logo": "logos/ponantexplorationsluxuryvoyagesglobaldestinations.png"
+ },
+ "tartecosmeticscom": {
+  "domain": "tartecosmetics.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "slingtv": {
+  "domain": "sling.com",
+  "logo": "logos/slingtv.png"
+ },
+ "moocustomprintingandbrandedmerchandise": {
+  "domain": "moo.com",
+  "logo": "logos/moocustomprintingandbrandedmerchandise.png"
+ },
+ "fairecomtheonlinewholesalemarketplace": {
+  "domain": "faire.com",
+  "logo": "logos/fairecomtheonlinewholesalemarketplace.png"
+ },
+ "elfcosmeticscom": {
+  "domain": "elfcosmetics.com",
+  "logo": "logos/elfcosmeticscom.png"
+ },
+ "eightsleepsleeptechnology": {
+  "domain": "eightsleep.com",
+  "logo": "logos/eightsleepsleeptechnology.png"
+ },
+ "littlecaesars": {
+  "domain": "littlecaesars.com",
+  "logo": "logos/littlecaesars.png"
+ },
+ "historyvaulthistorychannelseriesdocumentaries": {
+  "domain": "historyvault.com",
+  "logo": "logos/historyvaulthistorychannelseriesdocumentaries.png"
+ },
+ "madisonavenuecouture": {
+  "domain": "madisonavenuecouture.com",
+  "logo": null,
+  "note": "32px, blurry"
+ },
+ "grownbrilliancelabgrownjewelry": {
+  "domain": "grownbrilliance.com",
+  "logo": "logos/grownbrilliancelabgrownjewelry.png"
+ },
+ "replitbuildappssitesslidesvideoswithai": {
+  "domain": "replit.com",
+  "logo": "logos/replitbuildappssitesslidesvideoswithai.png"
+ },
+ "prenuvoproactivewholebodymriscan": {
+  "domain": "prenuvo.com",
+  "logo": "logos/prenuvoproactivewholebodymriscan.png"
+ },
+ "nobulltrainingshoesapparelnutrition": {
+  "domain": "nobullproject.com",
+  "logo": null,
+  "note": "32px, unclear"
+ },
+ "samsclub": {
+  "domain": "samsclub.com",
+  "logo": "logos/samsclub.png"
+ }
+}

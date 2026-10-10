@@ -44,6 +44,10 @@ h1{font-size:clamp(28px,7.5vw,40px);margin-top:1px}
 .hero{position:relative;flex:1 1 52%;min-height:120px;display:flex;align-items:flex-end;padding:16px 18px;overflow:hidden}
 .hero .initial{position:absolute;right:-6px;bottom:-34px;font-family:var(--fh);font-weight:700;font-size:clamp(150px,44vw,220px);line-height:1;color:rgba(10,10,10,.07);pointer-events:none}
 .hero .emoji{display:block;font-size:clamp(36px,10vw,46px);line-height:1;margin-bottom:10px;filter:saturate(.85)}
+.logo{width:52px;height:52px;border-radius:12px;background:#fff;border:1px solid #E6E1D8;box-shadow:0 1px 3px rgba(10,10,10,.06);display:grid;place-items:center;margin-bottom:10px;overflow:hidden}
+.logo img{width:36px;height:36px;object-fit:contain;border-radius:6px}
+.logo.ini{font-family:var(--fh);font-weight:700;font-size:28px;line-height:1;padding-top:4px;color:#2a2a2a}
+.listing .logo{width:46px;height:46px;margin-bottom:8px}.listing .logo img{width:32px;height:32px}
 .hero .nm{position:relative;flex:1;min-width:0;padding-right:8%}
 .hero .name{font-family:var(--fh);font-weight:700;font-size:clamp(28px,8vw,38px);line-height:1;overflow-wrap:anywhere;max-width:92%}
 .hero .name small{display:block;font-family:var(--fb);font-weight:400;font-size:14px;color:rgba(10,10,10,.6);margin-top:4px;line-height:1.2}
@@ -90,7 +94,7 @@ h1{font-size:clamp(28px,7.5vw,40px);margin-top:1px}
 .grid{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width:640px){.grid{grid-template-columns:1fr 1fr}}
 @media (min-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr}}
-.listing{position:relative;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.listing{position:relative;border:1px solid #E6E1D8;border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
 .listing .hero{flex:none;height:176px;min-height:0}
 .listing .hero .initial{font-size:150px;bottom:-26px}
 .listing .hero .emoji{font-size:30px;margin-bottom:6px}
@@ -122,6 +126,16 @@ nav.tabbar{flex:none;border-top:1px solid var(--border);background:#fff;padding:
 .tab[aria-selected=true]::after{content:"";position:absolute;bottom:6px;width:18px;height:2px;background:var(--fg);border-radius:2px}
 .tab .n{position:absolute;top:8px;left:calc(50% + 8px);min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--love);color:#fff;font-size:11px;line-height:18px;font-weight:600;text-align:center}
 .tab.share{color:#9a9a9a}
+.group{border:1px solid #E6E1D8;background:#FCFBF8;border-radius:18px;padding:2px 14px 14px;margin-top:16px}
+.group .sec{margin:12px 0 8px;padding-bottom:8px;border-bottom:1px solid #EEE9E0}
+.group .count{margin:12px 0 10px}
+@media (max-width:420px){.group{padding:2px 10px 10px;border-radius:16px}.pad{padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}}
+.remind-bar{font-size:15px;color:#333;background:var(--cream);border:1px solid #EFE8DA;border-radius:12px;padding:10px 14px;margin:4px 0 4px}
+.sub{margin:-4px 0 12px}
+.dismiss{display:block;width:100%;min-height:44px;border:0;border-top:1px solid var(--border);background:#fff;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:var(--track);cursor:pointer}
+.dismiss:hover{background:var(--sec);color:var(--no)}
+.linkbtn{background:none;border:0;padding:6px 2px;min-height:44px;font:inherit;font-weight:600;color:var(--fg);text-decoration:underline;text-decoration-color:rgba(10,10,10,.3);text-underline-offset:3px;cursor:pointer}
+.linkbtn:hover{text-decoration-color:var(--fg)}
 .toast{position:fixed;left:50%;bottom:calc(var(--tabh) + 16px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#fff;border:1px solid var(--border);box-shadow:0 8px 24px rgba(10,10,10,.14);padding:10px 16px;border-radius:12px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:20;font-size:15px;white-space:nowrap}
 .kbd{display:none;font-size:13px;color:var(--muted);text-align:center;margin-top:8px}
 @media (hover:hover) and (min-width:900px){.kbd{display:block}}
@@ -135,18 +149,10 @@ nav.tabbar{flex:none;border-top:1px solid var(--border);background:#fff;padding:
  <div class="status" id="status">Loading Offers…</div>
 </div></header>
 
-<section class="screen on" id="feed" aria-label="For You">
- <div class="deckmeta"><span id="prog"></span><span class="remind">Add to card in the Amex app before you shop</span></div>
- <div class="deck" id="deck"></div>
- <div class="actions">
-  <button class="act small mw-hover" id="undo" aria-label="Undo"><span class="c">↺</span>Undo</button>
-  <button class="act no big mw-hover" data-a="no" aria-label="No, not interested"><span class="c">✕</span>No</button>
-  <button class="act maybe mw-hover" data-a="maybe" aria-label="Maybe"><span class="c">?</span>Maybe</button>
-  <button class="act love mw-hover" data-a="love" aria-label="Love"><span class="c">♥</span>Love</button>
-  <button class="act yes big mw-hover" data-a="yes" aria-label="Yes, save"><span class="c">✓</span>Yes</button>
- </div>
- <div class="kbd">Keys: ← No · → Yes · ↓ Maybe · ↑ Love · U Undo</div>
-</section>
+<section class="screen on" id="feed" aria-label="For You"><div class="scroll" id="feedscroll"><div class="pad"><div class="wrap">
+ <div class="remind-bar">💳 Tap <b>Add to Card</b> in the Amex app before you shop.</div>
+ <div id="feedv"></div>
+</div></div></div></section>
 
 <section class="screen" id="search" aria-label="Search"><div class="scroll"><div class="pad"><div class="wrap">
  <div class="searchbar">
@@ -185,7 +191,7 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const KEY="jane-amex-offers-v2";
 const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-let OFFERS=[],BY={},ASOF=null,ORDER=[],filter="all";
+let LOGOS={},OFFERS=[],BY={},ASOF=null,ORDER=[],filter="all";
 let S=JSON.parse(localStorage.getItem(KEY)||"null")||{dec:{},hist:[]};
 const save=()=>{localStorage.setItem(KEY,JSON.stringify(S));badge()};
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -229,64 +235,34 @@ function heroHTML(o){const L=CAT_LOOK[o.category]||CAT_LOOK.Other;
  const b=[o.soon?`<span class="badge soon">⏰ Ending Soon</span>`:"",o.why?`<span class="badge ${o.tier===9?"no":"yes"}">${esc(o.why)}</span>`:""].join("");
  return `<div class="hero" style="background:linear-gradient(150deg,${L[0]} 0%,${L[1]} 100%)"><div class="initial">${esc(o.initial)}</div>
  <div class="badges">${b}</div><button class="heart${S.dec[o.id]==="love"||isSaved(o.id)?" on":""}" data-heart="${o.id}" aria-label="Save">${heartSVG}</button>
- <div class="nm"><div class="emoji" aria-hidden="true">${L[2]}</div><div class="name">${esc(o.title)}${o.subtitle?`<small>${esc(o.subtitle)}</small>`:""}</div></div></div>`}
+ <div class="nm">${LOGOS[o.id]?`<div class="logo"><img src="${LOGOS[o.id]}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.outerHTML='<div class=&quot;logo ini&quot;>${esc(o.initial)}</div>'"></div>`:`<div class="logo ini" aria-hidden="true">${esc(o.initial)}</div>`}<div class="name">${esc(o.title)}${o.subtitle?`<small>${esc(o.subtitle)}</small>`:""}</div></div></div>`}
 function bodyHTML(o){return `<div class="body"><div class="value">${esc(o.val)}</div><div class="cond">${esc(o.cond)}${o.trunc?"…":""}</div>
  ${o.trunc||o.val==="See Offer"?`<div class="unk">Looks like there's a deal — log into Amex to check it out.</div>`:""}
  <div class="facts"><span class="${o.soon?"soon":""}">${whenTxt(o)}</span><span>${esc(o.category)}</span></div></div>`}
-/* ---------- deck ---------- */
-const deckEl=$("#deck");
-const queue=()=>ORDER.filter(id=>!S.dec[id]);
-function renderDeck(){
- const q=queue(),total=ORDER.length,seen=total-q.length;
- $("#prog").textContent=q.length?`${Math.min(seen+1,total)} of ${total}`:`${total} of ${total}`;
- $("#undo").disabled=!S.hist.length;$$(".act[data-a]").forEach(b=>b.disabled=!q.length);
- if(!q.length){deckEl.innerHTML=`<div class="done"><h2>You've Seen Them All</h2><p class="tip">Your picks are in Saved. New offers arrive with the weekly update.</p><button class="tbtn mw-hover" onclick="go('saved')">See Saved</button></div>`;return}
- deckEl.innerHTML=q.slice(0,3).reverse().map((id,i,a)=>{const o=BY[id],pos=a.length-1-i;
-  return `<article class="card ${pos===0?"top":pos===1?"back1":"back2"}" data-id="${id}" ${pos?'aria-hidden="true"':""}>
-  <div class="stamp s-yes">YES</div><div class="stamp s-no">NO</div><div class="stamp s-love">LOVE</div><div class="stamp s-maybe">MAYBE</div>${heroHTML(o)}${bodyHTML(o)}</article>`}).join("");
- bindDrag(deckEl.querySelector(".card.top"));
+/* ---------- feed ---------- */
+const protectedOffer=o=>o.tier===1;
+function renderFeed(){
+ const vis=rank(OFFERS.filter(o=>protectedOffer(o)||S.dec[o.id]!=="no"));
+ const t1=vis.filter(o=>o.tier===1),t2=vis.filter(o=>o.tier===2),t3=vis.filter(o=>o.tier>=3);
+ const nNo=OFFERS.filter(o=>!protectedOffer(o)&&S.dec[o.id]==="no").length;
+ const sec=(h,sub,l)=>l.length?`<section class="group"><div class="sec"><h2>${h}</h2><span>${l.length}</span></div>${sub?`<p class="tip sub">${sub}</p>`:""}<div class="grid">${l.map(listing).join("")}</div></section>`:"";
+ $("#feedv").innerHTML=sec("Your Brands","Stores you said Yes to. These always stay here.",t1)+sec("Picked For You","From your favorite categories, best matches first.",t2)+sec("More Offers","",t3)+
+  (nNo?`<p class="tip" style="margin-top:22px">${nNo} hidden as Not Interested. <button class="linkbtn mw-hover" onclick="go('saved')">Bring them back in Saved</button></p>`:"");
 }
-function stamps(c,dx){const w=c.offsetWidth*.25;c.querySelector(".s-yes").style.opacity=Math.max(0,Math.min(1,dx/w));c.querySelector(".s-no").style.opacity=Math.max(0,Math.min(1,-dx/w))}
-let busy=false;
-function decide(a,opt={}){
- const c=deckEl.querySelector(".card.top");if(!c||busy)return;busy=true;const id=c.dataset.id;
- S.dec[id]=a;S.hist.push(id);save();
- const W=Math.max(innerWidth,600),dir=a==="no"?-1:a==="yes"?1:0;
- const finish=()=>{busy=false;renderDeck()};
- if(RM){finish();return}
- const back=deckEl.querySelector(".card.back1");if(back){back.classList.remove("back1");back.style.transform="none";back.style.opacity=1}
- let tx,ty,rot,dur;
- if(dir){const vx=opt.vx||0;tx=dir*W*1.1+(opt.x||0);ty=(opt.y||0)+(opt.vy||0)*200;rot=dir*30;dur=Math.max(180,Math.min(420,400-Math.abs(vx)*120))}
- else{c.querySelector(a==="love"?".s-love":".s-maybe").style.opacity=1;tx=0;ty=-(innerHeight);rot=a==="love"?-6:6;dur=380}
- c.style.transition=`transform ${dur}ms cubic-bezier(.3,.6,.4,1), opacity ${dur}ms`;
- if(dir)c.querySelector(dir>0?".s-yes":".s-no").style.opacity=1;
- requestAnimationFrame(()=>{c.style.transform=`translate(${tx}px,${ty}px) rotate(${rot}deg)`;c.style.opacity=dir?1:0});
- setTimeout(finish,dur);
-}
-function bindDrag(c){if(!c)return;let sx,sy,dx=0,dy=0,on=false,samples=[];
- c.addEventListener("pointerdown",e=>{if(e.target.closest(".heart")||busy)return;on=true;sx=e.clientX;sy=e.clientY;dx=dy=0;samples=[{x:sx,y:sy,t:performance.now()}];c.setPointerCapture(e.pointerId);c.classList.remove("anim");c.style.transition="none"});
- c.addEventListener("pointermove",e=>{if(!on)return;dx=e.clientX-sx;dy=e.clientY-sy;const t=performance.now();samples.push({x:e.clientX,y:e.clientY,t});samples=samples.filter(s=>t-s.t<100);
-  const rot=Math.max(-15,Math.min(15,dx/18));c.style.transform=`translate(${dx}px,${dy*.4}px) rotate(${rot}deg)`;stamps(c,dx)});
- const end=e=>{if(!on)return;on=false;const a=samples[0],b=samples[samples.length-1],dt=Math.max(1,b.t-a.t),vx=(b.x-a.x)/dt,vy=(b.y-a.y)/dt;
-  const W=c.offsetWidth,go=Math.abs(dx)>W*.3||(Math.abs(vx)>.5&&Math.abs(dx)>24&&Math.sign(vx)===Math.sign(dx));
-  if(go){decide(dx>0?"yes":"no",{x:dx,y:dy*.4,vx,vy});return}
-  c.classList.add("anim");c.style.transition="";c.style.transform="";stamps(c,0)};
- c.addEventListener("pointerup",end);c.addEventListener("pointercancel",end);
-}
-function undo(){if(busy)return;const id=S.hist.pop();if(!id)return;delete S.dec[id];save();renderDeck();
- const c=deckEl.querySelector(".card.top");if(c&&!RM){c.style.transition="none";c.style.transform="translate(-30px,-40px) rotate(-6deg) scale(1.02)";c.style.opacity=.4;requestAnimationFrame(()=>requestAnimationFrame(()=>{c.style.transition="transform .3s cubic-bezier(.34,1.56,.64,1),opacity .2s";c.style.transform="";c.style.opacity=1}))}}
-$$(".act[data-a]").forEach(b=>b.onclick=()=>decide(b.dataset.a));$("#undo").onclick=undo;
-document.addEventListener("keydown",e=>{if(cur!=="feed"||e.target.tagName==="INPUT")return;
- const k={ArrowLeft:"no",ArrowRight:"yes",ArrowDown:"maybe",ArrowUp:"love",m:"maybe",l:"love",M:"maybe",L:"love"}[e.key];
- if(k){e.preventDefault();decide(k)}else if(/^[uU]$/.test(e.key)||e.key==="Backspace"){e.preventDefault();undo()}});
+document.addEventListener("click",e=>{const d=e.target.closest("[data-dismiss]");if(!d)return;const id=d.dataset.dismiss,o=BY[id];if(!o||protectedOffer(o))return;
+ const card=d.closest(".listing");S.dec[id]="no";S.hist.push(id);save();
+ const after=()=>{if(cur==="feed")renderFeed();else if(cur==="search")results();toastUndo(o.title)};
+ if(card&&!RM){card.style.transition="opacity .2s ease-out,transform .2s ease-out";card.style.opacity=0;card.style.transform="scale(.97)";setTimeout(after,200)}else after()});
+function toastUndo(t){const e=$("#toast");e.innerHTML=`Hid ${esc(t)} <button class="linkbtn" id="tundo">Undo</button>`;e.style.opacity=1;e.style.pointerEvents="auto";clearTimeout(toast.t);
+ $("#tundo").onclick=()=>{const id=S.hist.pop();if(id){delete S.dec[id];save()}e.style.opacity=0;e.style.pointerEvents="none";if(cur==="feed")renderFeed();else if(cur==="search")results()};
+ toast.t=setTimeout(()=>{e.style.opacity=0;e.style.pointerEvents="none"},4000)}
 /* hearts anywhere */
 document.addEventListener("click",e=>{const h=e.target.closest("[data-heart]");if(!h)return;e.stopPropagation();const id=h.dataset.heart;
  if(isSaved(id)){delete S.dec[id];S.hist=S.hist.filter(x=>x!==id);save();toast("Removed From Saved")}else{
-  if(cur==="feed"&&deckEl.querySelector(".card.top")?.dataset.id===id){decide("yes");toast("Saved");return}
-  S.dec[id]="yes";save();toast("Saved")}
- if(cur==="feed")renderDeck();else if(cur==="search")results();else renderSaved()},true);
+    S.dec[id]="yes";save();toast("Saved")}
+ if(cur==="feed")renderFeed();else if(cur==="search")results();else renderSaved()},true);
 /* ---------- listing card ---------- */
-const listing=o=>`<article class="listing mw-hover">${heroHTML(o)}${bodyHTML(o)}</article>`;
+const listing=o=>`<article class="listing mw-hover">${heroHTML(o)}${bodyHTML(o)}${!protectedOffer(o)&&S.dec[o.id]!=="no"&&cur!=="saved"?`<button class="dismiss" data-dismiss="${o.id}" aria-label="Not interested in ${esc(o.title)}">Not Interested</button>`:""}</article>`;
 /* ---------- search ---------- */
 const CHIPS=[["all","All"],["soon","Ending Soon"],["mine","Your Brands"],...["Travel","Home","Groceries","Streaming","Fashion","Beauty","Dining","Kids","Electronics","Pharmacy","Other"].map(c=>[c,c])];
 function results(){
@@ -294,7 +270,7 @@ function results(){
  let list=OFFERS.filter(o=>(!k||o.id.includes(k))&&(filter==="all"||(filter==="soon"?o.soon:filter==="mine"?o.tier===1:o.category===filter)));
  list=k?list.sort((a,b)=>a.id.indexOf(k)-b.id.indexOf(k)||a.tier-b.tier||byExp(a,b)):rank(list);
  if(k&&!list.length){r.innerHTML=`<div class="none">No Amex offer for this store right now (as of ${fmt(ASOF)}).</div><p class="tip">Offers change often. Check back after the next weekly update.</p>`;return}
- r.innerHTML=`<div class="count">${list.length} ${list.length===1?"offer":"offers"}${k?` for “${esc(s)}”`:""}</div><div class="grid">${list.map(listing).join("")}</div>`;
+ r.innerHTML=`<section class="group"><div class="count">${list.length} ${list.length===1?"offer":"offers"}${k?` for “${esc(s)}”`:""}</div><div class="grid">${list.map(listing).join("")}</div></section>`;
 }
 $("#chips").innerHTML=CHIPS.map(([v,l])=>`<button class="chip" data-f="${v}" aria-pressed="${v==="all"}">${l}</button>`).join("");
 $("#chips").onclick=e=>{const c=e.target.closest(".chip");if(!c)return;filter=c.dataset.f;$$(".chip").forEach(x=>x.setAttribute("aria-pressed",x===c));results()};
@@ -302,8 +278,8 @@ $("#q").oninput=results;$("#clr").onclick=()=>{$("#q").value="";$("#q").focus();
 /* ---------- saved ---------- */
 function renderSaved(){
  const grp=a=>rank(OFFERS.filter(o=>S.dec[o.id]===a));
- const love=grp("love"),yes=grp("yes"),maybe=grp("maybe"),no=grp("no");
- const sec=(t,c,l)=>l.length?`<div class="sec"><span class="dot" style="background:${c}"></span><h2>${t}</h2><span>${l.length}</span></div><div class="grid">${l.map(listing).join("")}</div>`:"";
+ const love=grp("love"),yes=grp("yes"),maybe=grp("maybe"),no=grp("no").filter(o=>!protectedOffer(o));
+ const sec=(t,c,l)=>l.length?`<section class="group"><div class="sec"><span class="dot" style="background:${c}"></span><h2>${t}</h2><span>${l.length}</span></div><div class="grid">${l.map(listing).join("")}</div></section>`:"";
  $("#savedv").innerHTML=(love.length+yes.length+maybe.length?"":`<div class="none" style="margin-top:14px">Nothing saved yet. Swipe right or tap the heart on an offer you like.</div>`)+
   sec("Love","var(--love)",love)+sec("Yes","var(--yes)",yes)+sec("Maybe","var(--maybe)",maybe)+
   (no.length?`<details class="dismissed"><summary>Not Interested <span class="tip" style="font-family:var(--fb);font-size:15px;font-weight:400">(${no.length})</span></summary>
@@ -314,8 +290,8 @@ function renderSaved(){
 }
 /* ---------- tabs, share, misc ---------- */
 let cur="feed";
-function go(t){cur=t;$$(".tab[data-t]").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===t));$$(".screen").forEach(s=>s.classList.toggle("on",s.id===t));
- if(t==="feed")renderDeck();if(t==="search")results();if(t==="saved")renderSaved()}
+function go(t){cur=t;{const e=$("#toast");e.style.opacity=0;e.style.pointerEvents="none"}$$(".tab[data-t]").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===t));$$(".screen").forEach(s=>s.classList.toggle("on",s.id===t));
+ if(t==="feed")renderFeed();if(t==="search")results();if(t==="saved")renderSaved()}
 $$(".tab[data-t]").forEach(b=>b.onclick=()=>go(b.dataset.t));
 function badge(){const n=Object.values(S.dec).filter(v=>v!=="no").length,e=$("#nsaved");e.hidden=!n;e.textContent=n;
  if(ASOF)$("#status").innerHTML=`<span class="dot"></span>Offers updated ${fmt(ASOF)}${n?` · ${n} saved`:""}`}
@@ -326,11 +302,12 @@ $("#share").onclick=async()=>{
  if(navigator.share){try{await navigator.share({title:"Jane's Amex Offers",text,url});return}catch(e){if(e.name==="AbortError")return}}
  if(/iPhone|iPad|Android/i.test(navigator.userAgent)){location.href=`sms:?&body=${encodeURIComponent(text+" "+url)}`;return}
  try{await navigator.clipboard.writeText(text+" "+url);toast("Copied")}catch{toast("Copy: "+url)}};
-fetch("offers.json?v="+Date.now()).then(r=>r.json()).then(d=>{
+Promise.all([fetch("offers.json?v="+Date.now()).then(r=>r.json()),fetch("logos/manifest.json?v="+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,man])=>{
+ for(const k in man)if(man[k].logo)LOGOS[k]=man[k].logo;
  d=d.filter(o=>o&&o.merchant&&!/upgrade offer|personal loan/i.test(o.merchant));
  ASOF=d.map(o=>parseDate(o.source_date)).filter(Boolean).sort((a,b)=>b-a)[0]||new Date();
  OFFERS=d.map(prep);OFFERS.forEach(o=>BY[o.id]=o);ORDER=rank(OFFERS).map(o=>o.id);
- for(const id in S.dec)if(!BY[id])delete S.dec[id];S.hist=S.hist.filter(id=>BY[id]);save();
+ for(const id in S.dec)if(!BY[id]||(S.dec[id]==="no"&&protectedOffer(BY[id])))delete S.dec[id];S.hist=S.hist.filter(id=>BY[id]);save();
  go("feed");
 }).catch(()=>{$("#status").textContent="Couldn't load offers. Please refresh the page."});
 </script></body></html>

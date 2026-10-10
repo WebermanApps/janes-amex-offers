@@ -29,3 +29,9 @@ Sources: Tinder swipe-deck breakdowns (vinova.sg React Native report, soarias.co
 - White page, near-black text, #E5E5E5 hairlines. The card headers use **very soft per-category gradients** (pastel tints), not photos or scraped logos. The merchant's initial is set big in Khand.
 - Answer colors are the same as Brand Swipe: Love #E0245E, Yes #2E9E6A, Maybe #D99A1E, No #9A7B7B.
 - **Proposal (new beyond the guide):** the 12 pastel category tints for the card headers. They need branding-agent review.
+
+## Update, Oct 10, 2026, 8:30 PM: Scrolling Feed
+- Per Max, For You is now a **Zillow-style vertical feed** instead of a swipe stack. The sections are Your Brands (pinned, can never be dismissed), Picked For You, and More Offers.
+- "Not Interested" is a small footer button, only on cards that aren't in Your Brands. It shows an Undo popup, and dismissed offers can be restored from Saved.
+- Each section sits in a softly outlined, cream-tinted container (#E6E1D8 border), and the cards have a 1px #E6E1D8 border.
+- Brand logos (Max approved) are downloaded once into `logos/`, with `logos/manifest.json` mapping each merchant to its domain and logo file. A logo shows in a white rounded tile; if a logo is missing or blurry, the merchant's initial shows instead.
