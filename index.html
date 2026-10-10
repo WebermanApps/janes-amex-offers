@@ -21,8 +21,8 @@ button{font-family:inherit;color:inherit}
 header{flex:none;padding:calc(10px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) 6px calc(20px + env(safe-area-inset-left))}
 .hwrap{max-width:1100px;margin:0 auto}
 .wordmark{font-family:var(--fh);letter-spacing:var(--track);font-size:12px;color:var(--muted)}
-h1{font-size:clamp(28px,7.5vw,40px);margin-top:1px}
-.status{font-size:14px;color:var(--muted);margin-top:1px}
+h1{font-size:clamp(26px,7vw,34px);margin-top:0}
+.status{font-size:14px;color:var(--muted);margin-top:1px;line-height:1.3}
 .status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--yes);margin-right:6px;vertical-align:1px}
 /* screens */
 .screen{flex:1;min-height:0;display:none;flex-direction:column}
@@ -130,6 +130,33 @@ nav.tabbar{flex:none;border-top:1px solid var(--border);background:#fff;padding:
 .group .sec{margin:12px 0 8px;padding-bottom:8px;border-bottom:1px solid #EEE9E0}
 .group .count{margin:12px 0 10px}
 @media (max-width:420px){.group{padding:2px 10px 10px;border-radius:16px}.pad{padding-left:calc(12px + env(safe-area-inset-left));padding-right:calc(12px + env(safe-area-inset-right))}}
+.remind{color:var(--muted);white-space:nowrap}.remind b{color:#333;font-weight:600}
+#feed .pad{padding-top:2px;padding-bottom:4px}
+#feed{align-items:stretch;padding:0}
+.rowgrp{padding:0 0 3px;margin-top:6px;overflow:hidden;min-width:0}
+.rowgrp .sec{margin:0;padding:4px 8px 4px 14px;min-height:44px;border-bottom:1px solid #EEE9E0;display:flex;align-items:center;gap:10px}
+.rowgrp .sec h2{font-size:22px}.rowgrp .cnt{font-size:13px;color:var(--muted)}
+.arrows{margin-left:auto;display:none;gap:6px}
+@media (hover:hover) and (min-width:700px){.arrows{display:flex}}
+.arr{width:44px;height:44px;border-radius:50%;border:1px solid #E6E1D8;background:#fff;font-size:24px;line-height:1;cursor:pointer;color:#333;transition:background-color var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.arr:hover:not(:disabled){background:var(--sec);transform:scale(1.06)}.arr:disabled{opacity:.3;cursor:default}
+.row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 14px;padding:6px 14px 2px;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.row::-webkit-scrollbar{display:none}
+.mini{flex:0 0 clamp(228px,68vw,280px);scroll-snap-align:start;border:1px solid #E6E1D8;border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini.mw-hover:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(10,10,10,.10)}
+.mtop{display:flex;align-items:center;gap:10px;padding:3px 2px 3px 10px;min-height:50px}
+.logo.sm{width:38px;height:38px;border-radius:10px;margin:0;flex:none}.logo.sm img{width:26px;height:26px}.logo.sm.ini{font-size:22px}
+.mname{flex:1;min-width:0;font-family:var(--fh);font-weight:700;font-size:19px;line-height:1.05;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.heart.sm{position:static;flex:none;width:44px;height:44px;background:rgba(255,255,255,.85)}.heart.sm svg{width:20px;height:20px}
+.mbody{padding:6px 12px 0;display:flex;flex-direction:column;gap:1px;flex:1}
+.mval{font-family:var(--fh);font-weight:700;font-size:26px;line-height:1}
+.mcond{font-size:14px;color:#333;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mcond.unk{color:var(--maybe-t);white-space:normal;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.mfoot{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:13px;color:var(--muted);margin-top:auto;min-height:40px}
+.mfoot .soon{color:var(--maybe-t);font-weight:600}
+.mdis{border:0;background:none;color:var(--muted);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;min-height:40px;padding:0 0 0 8px;cursor:pointer;white-space:nowrap}
+.mdis:hover{color:var(--no);text-decoration:underline}
+.hidnote{margin:2px 4px 0;font-size:13px;text-align:right}.hidnote .linkbtn{min-height:40px;padding:0 2px}
 .remind-bar{font-size:15px;color:#333;background:var(--cream);border:1px solid #EFE8DA;border-radius:12px;padding:10px 14px;margin:4px 0 4px}
 .sub{margin:-4px 0 12px}
 .dismiss{display:block;width:100%;min-height:44px;border:0;border-top:1px solid var(--border);background:#fff;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:var(--track);cursor:pointer}
@@ -139,19 +166,18 @@ nav.tabbar{flex:none;border-top:1px solid var(--border);background:#fff;padding:
 .toast{position:fixed;left:50%;bottom:calc(var(--tabh) + 16px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#fff;border:1px solid var(--border);box-shadow:0 8px 24px rgba(10,10,10,.14);padding:10px 16px;border-radius:12px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:20;font-size:15px;white-space:nowrap}
 .kbd{display:none;font-size:13px;color:var(--muted);text-align:center;margin-top:8px}
 @media (hover:hover) and (min-width:900px){.kbd{display:block}}
-@media (min-width:900px){header{padding-top:18px;text-align:center}.deck{max-width:420px}}
+@media (min-width:900px){:root{--tabh:56px}.rowgrp{margin-top:4px}.row{padding-top:4px}#feed .pad{padding-top:0}header{padding-top:12px;padding-bottom:10px;text-align:center}.hwrap{display:flex;align-items:baseline;justify-content:center;gap:16px;flex-wrap:wrap}.hwrap h1{order:-1}.deck{max-width:420px}}
 @media (max-height:700px){.act .c{width:50px;height:50px}.act.big .c{width:56px;height:56px}.act.small .c{width:40px;height:40px}.hero .initial{font-size:130px}}
 @media (prefers-reduced-motion:reduce){.card.anim,.card.back1,.card.back2{transition:none}.tab svg{transition:none}}
 </style></head><body>
 <header><div class="hwrap">
  <div class="wordmark">MAX WEBERMAN</div>
  <h1>Jane's Amex Offers</h1>
- <div class="status" id="status">Loading Offers…</div>
+ <div class="status"><span id="status">Loading Offers…</span> · <span class="remind">💳 <b>Add to Card</b> in the Amex app first</span></div>
 </div></header>
 
 <section class="screen on" id="feed" aria-label="For You"><div class="scroll" id="feedscroll"><div class="pad"><div class="wrap">
- <div class="remind-bar">💳 Tap <b>Add to Card</b> in the Amex app before you shop.</div>
- <div id="feedv"></div>
+  <div id="feedv"></div>
 </div></div></div></section>
 
 <section class="screen" id="search" aria-label="Search"><div class="scroll"><div class="pad"><div class="wrap">
@@ -206,9 +232,10 @@ function expiry(raw,asof){if(!raw)return null;let m;
  if((m=/^(\d+)\s+days?\s+left$/i.exec(raw))){const d=new Date(asof);d.setDate(d.getDate()+ +m[1]);return d}
  return null}
 function valueOf(t){let m;
- if((m=/spend \$([\d,.]+) or more, earn \$([\d,.]+)( back)?(?:, up to (\d+) times)?/i.exec(t)))return[`$${m[2].replace(/\.00$/,"")} Back`,`When you spend $${m[1]}+${m[4]?` · up to ${m[4]} times`:""}`];
+ if((m=/spend \$([\d,.]+) or more[^,]*, earn \$([\d,.]+)( back)?(?:, up to (\d+) times)?/i.exec(t)))return[`$${m[2].replace(/\.00$/,"")} Back`,`When you spend $${m[1]}+${m[4]?` · up to ${m[4]} times`:""}`];
  if((m=/earn (\d+)% back on (a single purchase|purchases)[^$]*?(?:up to a total of \$([\d,]+))?/i.exec(t)))return[`${m[1]}% Back`,`${/single/i.test(m[2])?"On one purchase":"On purchases"}${m[3]?` · up to $${m[3]}`:""}`];
  if((m=/earn \+(\d+) additional miles per/i.exec(t)))return[`+${m[1]} Miles`,"Extra miles per eligible dollar"];
+ if((m=/earn \$([\d,.]+)/i.exec(t)))return[`$${m[1].replace(/\.00$/,"")} Back`,t.split(/, earn/i)[0]];
  return["See Offer",t]}
 function prep(o){
  const name=norm(o.merchant),parts=o.merchant.split(/ - /),title=parts[0].trim(),subtitle=parts.slice(1).join(" - ").trim();
@@ -241,16 +268,31 @@ function bodyHTML(o){return `<div class="body"><div class="value">${esc(o.val)}<
  <div class="facts"><span class="${o.soon?"soon":""}">${whenTxt(o)}</span><span>${esc(o.category)}</span></div></div>`}
 /* ---------- feed ---------- */
 const protectedOffer=o=>o.tier===1;
+function mini(o){const L=CAT_LOOK[o.category]||CAT_LOOK.Other,canDis=!protectedOffer(o)&&S.dec[o.id]!=="no"&&cur!=="saved";
+ return `<article class="mini mw-hover" data-id="${o.id}">
+ <div class="mtop" style="background:linear-gradient(150deg,${L[0]} 0%,${L[1]} 100%)">
+  ${LOGOS[o.id]?`<div class="logo sm"><img src="${LOGOS[o.id]}" alt="" loading="lazy" decoding="async"></div>`:`<div class="logo sm ini" aria-hidden="true">${esc(o.initial)}</div>`}
+  <div class="mname" title="${esc(o.title)}">${esc(o.title)}</div>
+  <button class="heart sm${isSaved(o.id)?" on":""}" data-heart="${o.id}" aria-label="Save ${esc(o.title)}">${heartSVG}</button></div>
+ <div class="mbody"><div class="mval">${esc(o.val)}</div>
+  ${o.trunc||o.val==="See Offer"?`<div class="mcond unk">Looks like there's a deal — log into Amex to check it out.</div>`:`<div class="mcond">${esc(o.cond)}</div>`}
+  <div class="mfoot"><span class="${o.soon?"soon":""}">${o.soon?"⏰ ":""}${whenTxt(o)}</span>${canDis?`<button class="mdis" data-dismiss="${o.id}" aria-label="Not interested in ${esc(o.title)}">Not Interested</button>`:""}</div></div></article>`}
+function row(h,l,dot){return l.length?`<section class="group rowgrp"><div class="sec">${dot?`<span class="dot" style="background:${dot}"></span>`:""}<h2>${h}</h2><span class="cnt">${l.length} ${l.length===1?"offer":"offers"}</span>
+ <span class="arrows"><button class="arr" data-dir="-1" aria-label="Scroll left">‹</button><button class="arr" data-dir="1" aria-label="Scroll right">›</button></span></div>
+ <div class="row">${l.map(mini).join("")}</div></section>`:""}
 function renderFeed(){
  const vis=rank(OFFERS.filter(o=>protectedOffer(o)||S.dec[o.id]!=="no"));
  const t1=vis.filter(o=>o.tier===1),t2=vis.filter(o=>o.tier===2),t3=vis.filter(o=>o.tier>=3);
  const nNo=OFFERS.filter(o=>!protectedOffer(o)&&S.dec[o.id]==="no").length;
- const sec=(h,sub,l)=>l.length?`<section class="group"><div class="sec"><h2>${h}</h2><span>${l.length}</span></div>${sub?`<p class="tip sub">${sub}</p>`:""}<div class="grid">${l.map(listing).join("")}</div></section>`:"";
- $("#feedv").innerHTML=sec("Your Brands","Stores you said Yes to. These always stay here.",t1)+sec("Picked For You","From your favorite categories, best matches first.",t2)+sec("More Offers","",t3)+
-  (nNo?`<p class="tip" style="margin-top:22px">${nNo} hidden as Not Interested. <button class="linkbtn mw-hover" onclick="go('saved')">Bring them back in Saved</button></p>`:"");
+ const keep={};$$("#feedv .row").forEach((r,i)=>keep[i]=r.scrollLeft);
+ $("#feedv").innerHTML=row("Your Brands",t1)+row("Picked For You",t2)+row("More Offers",t3)+
+  (nNo?`<p class="tip hidnote">${nNo} hidden · <button class="linkbtn mw-hover" onclick="go('saved')">Bring Back</button></p>`:"");
+ $$("#feedv .row").forEach((r,i)=>{if(keep[i])r.scrollLeft=keep[i]});arrows();
 }
+function arrows(){$$(".rowgrp").forEach(g=>{const r=g.querySelector(".row"),[l,rt]=g.querySelectorAll(".arr");const upd=()=>{l.disabled=r.scrollLeft<4;rt.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4};upd();r.onscroll=upd})}
+document.addEventListener("click",e=>{const a=e.target.closest(".arr");if(!a)return;const r=a.closest(".rowgrp").querySelector(".row");r.scrollBy({left:+a.dataset.dir*r.clientWidth*.85,behavior:RM?"auto":"smooth"})});
 document.addEventListener("click",e=>{const d=e.target.closest("[data-dismiss]");if(!d)return;const id=d.dataset.dismiss,o=BY[id];if(!o||protectedOffer(o))return;
- const card=d.closest(".listing");S.dec[id]="no";S.hist.push(id);save();
+ const card=d.closest(".listing,.mini");S.dec[id]="no";S.hist.push(id);save();
  const after=()=>{if(cur==="feed")renderFeed();else if(cur==="search")results();toastUndo(o.title)};
  if(card&&!RM){card.style.transition="opacity .2s ease-out,transform .2s ease-out";card.style.opacity=0;card.style.transform="scale(.97)";setTimeout(after,200)}else after()});
 function toastUndo(t){const e=$("#toast");e.innerHTML=`Hid ${esc(t)} <button class="linkbtn" id="tundo">Undo</button>`;e.style.opacity=1;e.style.pointerEvents="auto";clearTimeout(toast.t);
@@ -260,7 +302,7 @@ function toastUndo(t){const e=$("#toast");e.innerHTML=`Hid ${esc(t)} <button cla
 document.addEventListener("click",e=>{const h=e.target.closest("[data-heart]");if(!h)return;e.stopPropagation();const id=h.dataset.heart;
  if(isSaved(id)){delete S.dec[id];S.hist=S.hist.filter(x=>x!==id);save();toast("Removed From Saved")}else{
     S.dec[id]="yes";save();toast("Saved")}
- if(cur==="feed")renderFeed();else if(cur==="search")results();else renderSaved()},true);
+ if(cur==="feed")renderFeed();else if(cur==="search")results();else{renderSaved();arrows()}},true);
 /* ---------- listing card ---------- */
 const listing=o=>`<article class="listing mw-hover">${heroHTML(o)}${bodyHTML(o)}${!protectedOffer(o)&&S.dec[o.id]!=="no"&&cur!=="saved"?`<button class="dismiss" data-dismiss="${o.id}" aria-label="Not interested in ${esc(o.title)}">Not Interested</button>`:""}</article>`;
 /* ---------- search ---------- */
@@ -279,12 +321,13 @@ $("#q").oninput=results;$("#clr").onclick=()=>{$("#q").value="";$("#q").focus();
 function renderSaved(){
  const grp=a=>rank(OFFERS.filter(o=>S.dec[o.id]===a));
  const love=grp("love"),yes=grp("yes"),maybe=grp("maybe"),no=grp("no").filter(o=>!protectedOffer(o));
- const sec=(t,c,l)=>l.length?`<section class="group"><div class="sec"><span class="dot" style="background:${c}"></span><h2>${t}</h2><span>${l.length}</span></div><div class="grid">${l.map(listing).join("")}</div></section>`:"";
+ const sec=(t,c,l)=>row(t,l,c);
  $("#savedv").innerHTML=(love.length+yes.length+maybe.length?"":`<div class="none" style="margin-top:14px">Nothing saved yet. Swipe right or tap the heart on an offer you like.</div>`)+
   sec("Love","var(--love)",love)+sec("Yes","var(--yes)",yes)+sec("Maybe","var(--maybe)",maybe)+
   (no.length?`<details class="dismissed"><summary>Not Interested <span class="tip" style="font-family:var(--fb);font-size:15px;font-weight:400">(${no.length})</span></summary>
   <div class="lrow" style="margin:4px 0 6px"><button class="tbtn mw-hover" id="allback">Bring All Back</button></div>
   ${no.map(o=>`<div class="drow"><div class="t"><b>${esc(o.title)}</b><span>${esc(o.val)} · ${whenTxt(o)}</span></div><button class="tbtn ghost mw-hover" data-back="${o.id}">Bring Back</button></div>`).join("")}</details>`:"");
+ arrows();
  $$("[data-back]").forEach(b=>b.onclick=()=>{delete S.dec[b.dataset.back];S.hist=S.hist.filter(x=>x!==b.dataset.back);save();renderSaved();toast("Back in For You")});
  const ab=$("#allback");if(ab)ab.onclick=()=>{no.forEach(o=>delete S.dec[o.id]);S.hist=S.hist.filter(x=>S.dec[x]);save();renderSaved();toast("All back in For You")};
 }
@@ -294,7 +337,7 @@ function go(t){cur=t;{const e=$("#toast");e.style.opacity=0;e.style.pointerEvent
  if(t==="feed")renderFeed();if(t==="search")results();if(t==="saved")renderSaved()}
 $$(".tab[data-t]").forEach(b=>b.onclick=()=>go(b.dataset.t));
 function badge(){const n=Object.values(S.dec).filter(v=>v!=="no").length,e=$("#nsaved");e.hidden=!n;e.textContent=n;
- if(ASOF)$("#status").innerHTML=`<span class="dot"></span>Offers updated ${fmt(ASOF)}${n?` · ${n} saved`:""}`}
+ if(ASOF)$("#status").innerHTML=`<span class="dot"></span>Updated ${fmt(ASOF)}${n?` · ${n} saved`:""}`}
 function toast(t){const e=$("#toast");e.textContent=t;e.style.opacity=1;clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.opacity=0,1600)}
 $("#share").onclick=async()=>{
  const names=a=>OFFERS.filter(o=>S.dec[o.id]===a).map(o=>o.title);const L=names("love"),Y=names("yes"),M=names("maybe");

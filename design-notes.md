@@ -35,3 +35,7 @@ Sources: Tinder swipe-deck breakdowns (vinova.sg React Native report, soarias.co
 - "Not Interested" is a small footer button, only on cards that aren't in Your Brands. It shows an Undo popup, and dismissed offers can be restored from Saved.
 - Each section sits in a softly outlined, cream-tinted container (#E6E1D8 border), and the cards have a 1px #E6E1D8 border.
 - Brand logos (Max approved) are downloaded once into `logos/`, with `logos/manifest.json` mapping each merchant to its domain and logo file. A logo shows in a white rounded tile; if a logo is missing or blurry, the merchant's initial shows instead.
+
+## Update, Oct 10, 2026, 8:45 PM: Carousel Rows
+- Each section of For You (Your Brands, Picked For You, More Offers) and each Saved group is now a horizontal carousel row, like Zillow or Netflix: compact cards, scroll-snap, the next card peeking in, hidden scrollbars, an "N offers" count, and ‹ › arrow buttons on tablet and desktop (mouse devices only).
+- The page doesn't scroll vertically at 390x844, 768x1024, 1280x800 or 1440x900. At 360x740, the feed scrolls about 93px as a fallback.
