@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light only"><meta name="theme-color" content="#ffffff">
+<title>Jane's Amex Offers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Khand:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--mw-background:#fff;--mw-foreground:#0a0a0a;--mw-primary:#171717;--mw-primary-foreground:#fafafa;--mw-secondary:#f5f5f5;--mw-muted-text:#737373;--mw-border:#e5e5e5;--mw-font-heading:"Khand",sans-serif;--mw-font-body:"Hind",system-ui,sans-serif;--mw-tracking-label:.1em;--c-love:#E0245E;--c-yes:#2E9E6A;--c-maybe:#D99A1E;--c-maybe-text:#A36F0C;--c-no:#9A7B7B;--cream:#FAF8F4;--mw-ease:cubic-bezier(.2,.8,.2,1);--mw-dur:180ms}
+.mw-hover{transition:transform var(--mw-dur) var(--mw-ease),box-shadow var(--mw-dur) var(--mw-ease),background-color var(--mw-dur) var(--mw-ease),color var(--mw-dur) var(--mw-ease),border-color var(--mw-dur) var(--mw-ease)}
+.mw-hover:hover,.mw-hover:focus-visible{transform:translateY(-1px) scale(1.02);box-shadow:0 6px 18px rgba(10,10,10,.10)}
+.mw-hover:active{transform:scale(.98)}
+@media (prefers-reduced-motion:reduce){.mw-hover,.mw-hover:hover{transition:none;transform:none}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--mw-background);color:var(--mw-foreground);font-family:var(--mw-font-body);font-size:17px;line-height:1.45;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{min-height:100vh;min-height:100dvh;overflow-x:hidden}
+h1,h2,h3{font-family:var(--mw-font-heading);font-weight:700;line-height:1.1;letter-spacing:-.01em;margin:0}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--mw-border);padding:calc(10px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) 0 calc(16px + env(safe-area-inset-left))}
+.wrap{max-width:760px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.wordmark{font-family:var(--mw-font-heading);letter-spacing:var(--mw-tracking-label);font-size:13px;color:var(--mw-muted-text)}
+h1{font-size:clamp(30px,8vw,42px);margin-top:2px}
+.updated{font-size:14px;color:var(--mw-muted-text);margin:2px 0 10px}
+.updated b{color:var(--c-yes);font-weight:600}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 -2px}
+.tab{min-height:48px;font:600 15px var(--mw-font-body);text-transform:uppercase;letter-spacing:var(--mw-tracking-label);background:none;border:0;border-bottom:3px solid transparent;color:var(--mw-muted-text);cursor:pointer}
+.tab:hover{color:var(--mw-foreground)}
+.tab[aria-selected=true]{color:var(--mw-foreground);border-bottom-color:var(--mw-primary)}
+main{padding:16px calc(16px + env(safe-area-inset-right)) calc(110px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left))}
+.reminder{background:var(--cream);border:1px solid #EFE8DA;border-radius:.75rem;padding:12px 14px;font-size:15px;margin-bottom:18px}
+.reminder strong{font-weight:600}
+.section{margin:22px 0 10px;display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.section h2{font-size:26px}.section span{font-size:14px;color:var(--mw-muted-text)}
+.section p{margin:0}
+.sub{font-size:15px;color:var(--mw-muted-text);margin:-4px 0 10px}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:700px){.grid{grid-template-columns:1fr 1fr;align-items:start}}
+@media (min-width:1100px){.wrap{max-width:900px}.btn{max-width:900px}}
+.offer{border:1px solid var(--mw-border);border-radius:.75rem;padding:14px 16px;background:#fff;display:flex;flex-direction:column;gap:6px;min-width:0}
+.offer.soon{border-color:#EBCB86;background:#FFFCF5}
+.offer.yes{border-left:4px solid var(--c-yes)}
+.m{font-family:var(--mw-font-heading);font-size:22px;line-height:1.1;overflow-wrap:anywhere}
+.m small{display:block;font-family:var(--mw-font-body);font-size:14px;color:var(--mw-muted-text);font-weight:400;margin-top:2px}
+.o{font-size:17px;overflow-wrap:anywhere}
+.unk{font-size:15px;color:var(--c-maybe-text)}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:2px}
+.pill{font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:999px;background:var(--mw-secondary);color:#404040;white-space:nowrap}
+.pill.exp{background:#fff;border:1px solid var(--mw-border)}
+.pill.soon{background:#FBF1DC;color:var(--c-maybe-text);border:0;font-weight:600}
+.pill.why{background:#E6F4EC;color:#1F7A50}
+.pill.no{background:#F3EEEE;color:#7A5F5F}
+details.hidden{margin-top:24px;border-top:1px solid var(--mw-border);padding-top:10px}
+details.hidden summary{min-height:44px;display:flex;align-items:center;cursor:pointer;color:var(--mw-muted-text);font-size:15px}
+.searchbox{position:relative;margin:4px 0 8px}
+.searchbox input{width:100%;font:400 22px var(--mw-font-body);padding:16px 52px 14px 16px;border:2px solid var(--mw-primary);border-radius:0;background:#fff;color:var(--mw-foreground);min-height:60px;outline:none}
+.searchbox input:focus{box-shadow:0 0 0 4px rgba(46,158,106,.18)}
+.searchbox input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:48px;height:48px;border:0;background:none;font-size:24px;color:var(--mw-muted-text);cursor:pointer}
+.clear:hover{color:var(--mw-foreground)}
+.tips{font-size:15px;color:var(--mw-muted-text)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.chip{min-height:44px;padding:0 16px;border:1px solid var(--mw-border);border-radius:999px;background:#fff;font:400 16px var(--mw-font-body);color:var(--mw-foreground);cursor:pointer}
+.chip:hover{border-color:var(--mw-primary)}
+.none{border:1px dashed #D9CFC0;background:var(--cream);border-radius:.75rem;padding:18px 16px;font-size:18px}
+.sharebar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--mw-border);padding:10px calc(16px + env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left))}
+.btn{display:block;width:100%;max-width:760px;margin:0 auto;min-height:52px;font:600 15px var(--mw-font-body);text-transform:uppercase;letter-spacing:var(--mw-tracking-label);border:2px solid var(--mw-primary);background:#fff;color:var(--mw-primary);border-radius:0;cursor:pointer}
+.btn:hover{background:var(--mw-secondary)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#fff;color:var(--mw-foreground);border:1px solid var(--mw-border);box-shadow:0 6px 18px rgba(10,10,10,.12);padding:10px 16px;border-radius:.5rem;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9}
+.err{color:#9A3B3B}
+</style></head><body>
+<header><div class="wrap">
+ <div class="top"><span class="wordmark">MAX WEBERMAN</span></div>
+ <h1>Jane's Amex Offers</h1>
+ <p class="updated" id="updated">Loading Offers…</p>
+ <div class="tabs" role="tablist">
+  <button class="tab" role="tab" id="t-feed" aria-selected="true">For You</button>
+  <button class="tab" role="tab" id="t-search" aria-selected="false">Search</button>
+ </div>
+</div></header>
+<main><div class="wrap" id="view"></div></main>
+<div class="sharebar"><button class="btn mw-hover" id="share">Share With Max</button></div>
+<div class="toast" id="toast"></div>
+<script>
+/* ===== Jane's preferences (from her Shopping Quiz, Oct 10 2026). Edit here if her answers change. ===== */
+const YES_BRANDS=["nordstrom","macy's","macys","delta","marriott","hilton","fine hotels","hertz","uber","target","lowe's","lowes","wayfair","whole foods","costco","walmart","disney","hulu","peacock","carter's","pottery barn","lego","best buy","amazon","sephora","ulta","resy","starbucks","cvs","walgreens"];
+const MAYBE_BRANDS=["expedia","clear","williams sonoma","nike","dell"];
+const RELATED={"sam's club":"Like Costco & Walmart+"};          /* shown with Your Brands */
+const TRAVEL_FITS={"airbnb":"Fits Your Travel","turo":"Like Hertz","luxury escapes":"Fits Your Travel"}; /* top of Travel */
+const NO_BRANDS=["saks","lululemon","tory burch","bluemercury","instacart","home depot","uber eats","doordash","grubhub","new york times","equinox","soulcycle","peloton","chewy","petco","barkbox"];
+const NO_CATEGORIES=["Fitness","Pets","Food Delivery"];
+const CAT_RANK={Travel:1,Home:2,Groceries:3,Streaming:3,Kids:3,Fashion:4,Electronics:4,Beauty:5,Dining:5,Pharmacy:5};
+const SOON_DAYS=7;
+/* ====================================================================================================== */
+const $=s=>document.querySelector(s),view=$("#view");
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+let OFFERS=[],ASOF=null,tab="feed",q="";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>s.toLowerCase().replace(/[’']/g,"'").replace(/\s+/g," ");
+const squash=s=>s.toLowerCase().replace(/[^a-z0-9]/g,"");
+function parseDate(s){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||"");return m?new Date(+m[1],m[2]-1,+m[3]):null}
+function expiry(raw,asof){if(!raw)return null;let m;
+ if((m=/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/.exec(raw))){const y=+m[3]<100?2000+ +m[3]:+m[3];return new Date(y,m[1]-1,+m[2])}
+ if(/^tomorrow$/i.test(raw)){const d=new Date(asof);d.setDate(d.getDate()+1);return d}
+ if(/^today$/i.test(raw))return new Date(asof);
+ if((m=/^(\d+)\s+days?\s+left$/i.exec(raw))){const d=new Date(asof);d.setDate(d.getDate()+ +m[1]);return d}
+ return null}
+const fmt=d=>`${MON[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+function prep(o){
+ const name=norm(o.merchant),parts=o.merchant.split(/ - /),title=parts[0].trim(),subtitle=parts.slice(1).join(" - ").trim();
+ const trunc=/…\s*\(truncated\)\s*$|\(truncated\)/.test(o.offer||"");
+ const text=(o.offer||"").replace(/…?\s*\(truncated\)\s*$/,"").trim();
+ const exp=expiry(o.expires,ASOF);const days=exp?Math.round((exp-ASOF)/864e5):null;
+ const hit=list=>list.find(b=>name.includes(b));
+ const isNoBrand=!!hit(NO_BRANDS);
+ const yes=!isNoBrand&&hit(YES_BRANDS),maybe=!isNoBrand&&hit(MAYBE_BRANDS);
+ const relKey=Object.keys(RELATED).find(k=>name.includes(k)),fitKey=Object.keys(TRAVEL_FITS).find(k=>name.includes(k));
+ const noCat=NO_CATEGORIES.includes(o.category);
+ let tier,why="";
+ if(isNoBrand){tier=9;why="You Said No"}
+ else if(noCat){tier=9;why=`You Skip ${o.category}`}
+ else if(yes){tier=1;why="You Said Yes"}
+ else if(relKey){tier=1;why=RELATED[relKey]}
+ else if(fitKey){tier=2;why=TRAVEL_FITS[fitKey]}
+ else if(maybe){tier=2;why="You Said Maybe"}
+ else if(CAT_RANK[o.category]){tier=2;why=`Top Pick: ${o.category}`}
+ else tier=3;
+ return{...o,direct:!!yes,boost:fitKey?0:1,title,subtitle,text,trunc,exp,days,tier,why,catRank:CAT_RANK[o.category]||9,isNo:tier===9,key:squash(o.merchant)};
+}
+const byExp=(a,b)=>(a.days??9999)-(b.days??9999);
+function card(o){
+ const soon=o.days!=null&&o.days<=SOON_DAYS&&o.days>=0;
+ const when=o.exp?(o.days<0?"Expired":o.days===0?"Ends Today":o.days===1?"Ends Tomorrow":soon?`Ends In ${o.days} Days`:`Ends ${fmt(o.exp)}`):"End Date Not Listed";
+ return `<article class="offer mw-hover${soon?" soon":""}${o.tier===1?" yes":""}">
+ <div class="m">${esc(o.title)}${o.subtitle?`<small>${esc(o.subtitle)}</small>`:""}</div>
+ <div class="o">${esc(o.text||"Offer details not listed")}${o.trunc?"…":""}</div>
+ ${o.trunc||!o.text?`<div class="unk">Looks like there's a deal — log into Amex to check it out.</div>`:""}
+ <div class="meta"><span class="pill ${soon?"soon":"exp"}">${soon?"⏰ ":""}${when}</span>${o.why?`<span class="pill ${o.isNo?"no":"why"}">${esc(o.why)}</span>`:""}<span class="pill">${esc(o.category)}</span></div>
+ </article>`}
+const reminder=`<div class="reminder">💳 <strong>Remember:</strong> tap <strong>Add to Card</strong> on an offer in the Amex app <strong>before</strong> you shop, or it won't count. Online vs. in-store details aren't listed here — if unsure, log into Amex to check it out.</div>`;
+function feed(){
+ const vis=OFFERS.filter(o=>!o.isNo),hidden=OFFERS.filter(o=>o.isNo).sort(byExp);
+ const t1=vis.filter(o=>o.tier===1).sort((a,b)=>b.direct-a.direct||byExp(a,b));
+ const t2=vis.filter(o=>o.tier===2).sort((a,b)=>a.catRank-b.catRank||a.boost-b.boost||byExp(a,b));
+ const t3=vis.filter(o=>o.tier===3).sort(byExp);
+ const sec=(h,sub,list)=>list.length?`<div class="section"><h2>${h}</h2><span>${list.length}</span></div>${sub?`<p class="sub">${sub}</p>`:""}<div class="grid">${list.map(card).join("")}</div>`:"";
+ view.innerHTML=reminder+sec("Your Brands","Stores you said Yes to, and close cousins.",t1)+sec("Picked For You","From your favorite categories: Travel, Home, Groceries, Streaming and more.",t2)+sec("More Offers","",t3)+
+ (hidden.length?`<details class="hidden"><summary>Show ${hidden.length} offers you'd probably skip (fitness, pets, brands you said No to)</summary><div class="grid" style="margin-top:8px">${hidden.map(card).join("")}</div></details>`:"");
+}
+function search(){
+ view.innerHTML=`${reminder}<div class="searchbox"><input id="q" type="search" inputmode="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type a store, like Nike" aria-label="Search stores" value="${esc(q)}"><button class="clear" id="clr" aria-label="Clear">×</button></div>
+ <div class="chips">${["Nordstrom","Macy's","Delta","Sam's Club","Airbnb","Target"].map(s=>`<button class="chip mw-hover" data-q="${esc(s)}">${esc(s)}</button>`).join("")}</div><div id="res"></div>`;
+ const inp=$("#q");inp.oninput=()=>{q=inp.value;results()};$("#clr").onclick=()=>{q="";inp.value="";inp.focus();results()};
+ view.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{q=c.dataset.q;inp.value=q;results()});
+ results();
+}
+function results(){
+ const r=$("#res"),s=q.trim();if(!s){r.innerHTML=`<p class="tips">Type any part of a store name. Capital letters, spaces and punctuation don't matter.</p>`;return}
+ const k=squash(s),list=OFFERS.filter(o=>k&&o.key.includes(k)).sort((a,b)=>a.key.indexOf(k)-b.key.indexOf(k)||a.tier-b.tier||byExp(a,b));
+ r.innerHTML=list.length?`<div class="section"><h2>${list.length} ${list.length===1?"Offer":"Offers"} Found</h2></div><div class="grid">${list.map(card).join("")}</div>`
+ :`<div class="none">No Amex offer for this store right now (as of ${fmt(ASOF)}).</div><p class="tips">Offers change often. Check back after the next weekly update.</p>`;
+}
+function render(){$("#t-feed").setAttribute("aria-selected",tab==="feed");$("#t-search").setAttribute("aria-selected",tab==="search");tab==="feed"?feed():search()}
+$("#t-feed").onclick=()=>{tab="feed";render();scrollTo(0,0)};$("#t-search").onclick=()=>{tab="search";render();setTimeout(()=>$("#q")&&$("#q").focus(),50)};
+function toast(t){const e=$("#toast");e.textContent=t;e.style.opacity=1;setTimeout(()=>e.style.opacity=0,1800)}
+$("#share").onclick=async()=>{
+ const top=OFFERS.filter(o=>o.tier===1).sort(byExp).slice(0,3).map(o=>o.title).join(", ");
+ const text=`Jane's Amex Offers${ASOF?` (updated ${fmt(ASOF)})`:""}${top?` — my top picks: ${top}`:""}`,url=location.href.split("#")[0];
+ if(navigator.share){try{await navigator.share({title:"Jane's Amex Offers",text,url});return}catch(e){if(e.name==="AbortError")return}}
+ if(/iPhone|iPad|Android/i.test(navigator.userAgent)){location.href=`sms:?&body=${encodeURIComponent(text+" "+url)}`;return}
+ try{await navigator.clipboard.writeText(text+" "+url);toast("Copied")}catch{toast("Copy this link: "+url)}
+};
+fetch("offers.json?v="+Date.now()).then(r=>r.json()).then(d=>{
+ d=d.filter(o=>o&&o.merchant&&!/upgrade offer|personal loan/i.test(o.merchant));
+ ASOF=d.map(o=>parseDate(o.source_date)).filter(Boolean).sort((a,b)=>b-a)[0]||new Date();
+ OFFERS=d.map(prep);
+ $("#updated").innerHTML=`<b>●</b> Offers updated ${fmt(ASOF)} · ${OFFERS.length} offers`;render();
+}).catch(()=>{$("#updated").textContent="";view.innerHTML=`<p class="err">Couldn't load offers. Please refresh the page.</p>`});
+</script></body></html>

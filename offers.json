@@ -1,0 +1,902 @@
+[
+ {
+  "merchant": "Nordstrom & Nordstrom Rack",
+  "offer": "Spend $100 or more, earn $25 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Apple Pay",
+  "offer": "Spend 3 times using Apple Pay®, earn $10 back",
+  "expires": "10/26/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Macy's",
+  "offer": "Earn +5 additional miles per eligible dollar spent,… (truncated)",
+  "expires": "11/15/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Etsy",
+  "offer": "Spend $150 or more, earn $30 back",
+  "expires": "11/23/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "lululemon",
+  "offer": "Spend $120 or more, earn $25 back",
+  "expires": "11/01/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Free People",
+  "offer": "Spend $150 or more, earn $25 back",
+  "expires": "10/27/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "American Express Venue Collection",
+  "offer": "Earn 10% back on qualifying concessions purchases, up to $25… (truncated)",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "US Grand Prix (Austin) - Qualifying Merchandise",
+  "offer": "Spend $100 or more on qualifying merchandise purchases, earn $20… (truncated)",
+  "expires": "10/25/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "NFL Sunday Ticket on YouTube & YouTube TV",
+  "offer": "Spend $240 or more, earn $35 back",
+  "expires": "6 days left",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Oura - Wellness Technology",
+  "offer": "Spend $400 or more, earn $50 back",
+  "expires": "3 days left",
+  "channel": null,
+  "added": false,
+  "category": "Fitness",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Airbnb - Experiences and Services",
+  "offer": "Spend $80 or more, earn $20 back",
+  "expires": "9 days left",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "MUJI - Apparel, Household Goods, Stationery, and More",
+  "offer": "Spend $100 or more, earn $20 back",
+  "expires": "12 days left",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Sportsman's Warehouse",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "dyson.com",
+  "offer": "Earn 2% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "thriftbooks.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "HBO Max - Annual Subscription",
+  "offer": "Spend $99 or more, earn $25",
+  "expires": "01/15/27",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "iherb.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Pharmacy",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Function Health - Access to 160+ lab tests & MRI",
+  "offer": "Spend $365 or more, earn $100 back",
+  "expires": "01/15/27",
+  "channel": null,
+  "added": false,
+  "category": "Fitness",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "tnuck.com (Tuckernuck)",
+  "offer": "Earn 5% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Delta Gift Cards",
+  "offer": "Earn +5 additional miles per eligible dollar spent,… (truncated)",
+  "expires": "12/22/26",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "pura.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Turo - Car Rental Marketplace",
+  "offer": "Spend $150 or more, earn $30 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Cozy Earth - Bedding and Loungewear",
+  "offer": "Spend $350 or more, earn $115 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Hyatt Resorts - Select US, Caribbean, & Latin America",
+  "offer": "Spend $500 or more, earn $100 back",
+  "expires": "11/15/26",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "BBC.com - Annual Subscription",
+  "offer": "Spend $49.99 or more, earn $49.99 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Spirit Halloween",
+  "offer": "Spend $75 or more, earn $15 back",
+  "expires": "10/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Fanatics.com - Sports Apparel, Jerseys, Hats, Fan Gear and more",
+  "offer": "Spend $125 or more, earn $20 back, up to 2 times (total of $40).",
+  "expires": "03/30/27",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Dropbox",
+  "offer": "Earn 40% back on purchases, up to a total of $30",
+  "expires": "11/25/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Teleflora - Flowers arranged & delivered by local florists",
+  "offer": "Spend $15 or more, earn $15 back, up to 10 times (total of $150).",
+  "expires": "11/30/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "rugsusa.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "NFLShop.com - The Official Online Shop of the NFL",
+  "offer": "Spend $100 or more, earn $20 back, up to 2 times (total of $40).",
+  "expires": "02/28/27",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Zenni - Prescription Eyewear",
+  "offer": "Spend $60 or more, earn $20 back",
+  "expires": "03/30/27",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "L.L.Bean",
+  "offer": "Earn 15% back on a single purchase, up to a total of $30",
+  "expires": "11/14/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Patagonia.com",
+  "offer": "Spend $200 or more, earn $30 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Benihana",
+  "offer": "Spend $100 or more, earn $20 back, up to 4 times (total of $80).",
+  "expires": "Tomorrow",
+  "channel": null,
+  "added": false,
+  "category": "Dining",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Vuori - Performance Apparel",
+  "offer": "Spend $125 or more, earn $25 back",
+  "expires": "11/22/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "REVOLVE",
+  "offer": "Earn +5 additional miles per eligible dollar spent,… (truncated)",
+  "expires": "11/14/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "kuhl.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Scheels - Sporting Goods, Clothing, and Footwear",
+  "offer": "Spend $225 or more, earn $40 back",
+  "expires": "11/20/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Tecovas",
+  "offer": "Spend $250 or more, earn $50 back",
+  "expires": "11/15/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "LensCrafters",
+  "offer": "Spend $200 or more, earn $40 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Cracker Barrel",
+  "offer": "Earn 10% back on a single purchase, up to a total of $6",
+  "expires": "10/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Dining",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "openfarmpet.com",
+  "offer": "Earn 5% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Pets",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Aura.com - Online Safety",
+  "offer": "Spend $100 or more, earn $80 back",
+  "expires": "02/19/27",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Constant Contact - Digital & Email Marketing Platform",
+  "offer": "Spend $150 or more, earn $150 back",
+  "expires": "01/31/27",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Ugg",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "crocs.com - Clogs, Sandals, Sneakers & Jibbitz",
+  "offer": "Earn 10% back on purchases, up to a total of $20",
+  "expires": "01/15/27",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "DISH Network",
+  "offer": "Spend $94.99 or more, earn $80 back",
+  "expires": "12/11/26",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Sam Edelman - Women's Fashion",
+  "offer": "Spend $150 or more, earn $30 back",
+  "expires": "12/15/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Tonal - Smart Home Gym",
+  "offer": "Spend $1,200 or more, earn $300 back",
+  "expires": "02/28/27",
+  "channel": null,
+  "added": false,
+  "category": "Fitness",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "American Home Shield - Home Warranty",
+  "offer": "Spend $150 or more, earn $50 back. Enroll by 1/5/2027.",
+  "expires": "04/05/27",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "stevemadden.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Fragrance.com",
+  "offer": "Spend $125 or more, earn $25 back, up to 2 times (total of $50).",
+  "expires": "02/09/27",
+  "channel": null,
+  "added": false,
+  "category": "Beauty",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "HUGO BOSS",
+  "offer": "Spend $250 or more, earn $50 back",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Fubo",
+  "offer": "Spend $65 or more, earn $30 back, up to 3 times (total of $90).",
+  "expires": "11/07/26",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Oakley",
+  "offer": "Spend $150 or more, earn $30 back, up to 2 times (total of $60).",
+  "expires": "11/13/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "pandora.net",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "eddiebauer.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "MGM+ Streaming",
+  "offer": "Spend $7.99 or more, earn $7.99 back, up to 3 times (total of $23.… (truncated)",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Ancestry - Family History",
+  "offer": "Earn 20% back on purchases, up to a total of $100",
+  "expires": "12/29/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Burberry",
+  "offer": "Spend $600 or more, earn $120 back",
+  "expires": "6 days left",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "prettylitter.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Pets",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Under Armour",
+  "offer": "Earn 20% back on purchases, up to a total of $10",
+  "expires": "11/08/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "kiwico.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Kids",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "frankandeileen.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Charles Tyrwhitt - Men's Shirts",
+  "offer": "Spend $150 or more, earn $30 back",
+  "expires": "11/16/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Xero.com - Accounting, Payroll, & Payments for Small Business",
+  "offer": "Earn 75% back on purchases, up to a total of $200",
+  "expires": "11/10/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Hard Rock Hotel New York",
+  "offer": "Spend $500 or more, earn $100 back",
+  "expires": "04/02/27",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "NordicTrack",
+  "offer": "Earn 10% back on a single purchase, up to a total of $325",
+  "expires": "12/05/26",
+  "channel": null,
+  "added": false,
+  "category": "Fitness",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "FWRD.com - Luxury Apparel",
+  "offer": "Spend $400 or more, earn $80 back",
+  "expires": "11/14/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Sur La Table",
+  "offer": "Spend $100 or more, earn $15 back",
+  "expires": "6 days left",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Super Duolingo - Annual Subscription",
+  "offer": "Spend $75 or more, earn $30",
+  "expires": "11/30/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Wine Insiders - Wines Delivered To Your Door",
+  "offer": "Spend $80 or more, earn $40 back",
+  "expires": "01/31/27",
+  "channel": null,
+  "added": false,
+  "category": "Groceries",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Nothing Bundt Cakes",
+  "offer": "Earn 15% back on a single purchase, up to a total of $7",
+  "expires": "11/15/26",
+  "channel": null,
+  "added": false,
+  "category": "Dining",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "NHL Shop - NHL Apparel, Hockey Gear, Gifts, and more",
+  "offer": "Spend $100 or more, earn $20 back, up to 2 times (total of $40).",
+  "expires": "03/12/27",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "MegaSeats.com - Live Music, Sports & Events",
+  "offer": "Spend $250 or more, earn $50 back, up to 2 times (total of $100).",
+  "expires": "11/19/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "canon.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Electronics",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Ollie's Bargain Outlet",
+  "offer": "Earn 10% back on a single purchase, up to a total of $10",
+  "expires": "11/20/26",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Select Best Western & SureStay Hotels - US & Canada",
+  "offer": "Spend $250 or more, earn $50 back at select locations in the US an… (truncated)",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Carhartt",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "kohler.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "eltamd.com",
+  "offer": "Earn 9% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Beauty",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Luxury Escapes",
+  "offer": "Earn 10% back on purchases, up to a total of $300",
+  "expires": "11/30/26",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "LegalZoom - Legal Services",
+  "offer": "Earn 20% back on a single purchase, up to a total of $100",
+  "expires": "11/30/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "cecred.com",
+  "offer": "Earn 4% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Beauty",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Ponant Explorations - Luxury Voyages, Global Destinations",
+  "offer": "Earn 20% back on purchases, up to a total of $2,500",
+  "expires": "12/01/26",
+  "channel": null,
+  "added": false,
+  "category": "Travel",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "tartecosmetics.com",
+  "offer": "Earn 8% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Beauty",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Sling TV",
+  "offer": "Spend $19.99 or more, earn $15 back, up to 2 times (total of $30).",
+  "expires": "11/30/26",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "MOO - Custom Printing and Branded Merchandise",
+  "offer": "Earn 20% back on a single purchase, up to a total of $300",
+  "expires": "12/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Faire.com - The Online Wholesale Marketplace",
+  "offer": "Earn 30% back on a single purchase, up to a total of $150",
+  "expires": "11/30/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "elfcosmetics.com",
+  "offer": "Earn 7% back on purchases, up to a total of $250",
+  "expires": "11/02/26",
+  "channel": null,
+  "added": false,
+  "category": "Beauty",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Eight Sleep - Sleep Technology",
+  "offer": "Spend $1,000 or more, earn $100 back",
+  "expires": "01/02/27",
+  "channel": null,
+  "added": false,
+  "category": "Home",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Little Caesars",
+  "offer": "Earn 15% back on a single purchase, up to a total of $5",
+  "expires": "10/31/26",
+  "channel": null,
+  "added": false,
+  "category": "Dining",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "HISTORY Vault - HISTORY Channel Series & Documentaries",
+  "offer": "Spend $5.99 or more, earn $5.99 back, up to 3 times (total of $17.9… (truncated)",
+  "expires": "5 days left",
+  "channel": null,
+  "added": false,
+  "category": "Streaming",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Madison Avenue Couture",
+  "offer": "Spend $800 or more, earn $250 back",
+  "expires": "03/29/27",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Grown Brilliance - Lab Grown Jewelry",
+  "offer": "Earn 15% back on purchases, up to a total of $2,500",
+  "expires": "Tomorrow",
+  "channel": null,
+  "added": false,
+  "category": "Fashion",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Replit - Build Apps, Sites, Slides, Videos with AI",
+  "offer": "Spend $75 or more, earn $25 back, up to 3 times (total of $75).",
+  "expires": "01/22/27",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Prenuvo - Proactive Whole Body MRI Scan",
+  "offer": "Spend $2,499 or more, earn $450 back",
+  "expires": "11/22/26",
+  "channel": null,
+  "added": false,
+  "category": "Other",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "NOBULL - Training Shoes, Apparel & Nutrition",
+  "offer": "Spend $150 or more, earn $30 back",
+  "expires": "12/22/26",
+  "channel": null,
+  "added": false,
+  "category": "Fitness",
+  "source_date": "2026-10-10"
+ },
+ {
+  "merchant": "Sam's Club",
+  "offer": "Earn 30% back on a single purchase of a new membership, up… (truncated)",
+  "expires": "11/18/26",
+  "channel": null,
+  "added": false,
+  "category": "Groceries",
+  "source_date": "2026-10-10"
+ }
+]
