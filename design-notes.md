@@ -1,4 +1,4 @@
-# Jane's Amex Offers: Design Notes
+# Mom's Amex Offers: Design Notes
 
 Redesign on Oct 10, 2026: a blend of Tinder, Zillow and the Tesla app, inside Max's brand. The rules are light mode only, Khand and Hind fonts, square outlined buttons, `.mw-hover`, Title Case headings, and the restrained answer colors from Brand Swipe.
 

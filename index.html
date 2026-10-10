@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light only"><meta name="theme-color" content="#ffffff">
-<title>Jane's Amex Offers</title>
+<title>Mom's Amex Offers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Khand:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -183,7 +183,7 @@ html{color-scheme:light only}
 .mw-share{min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--mw-ink);background:#fff;color:var(--mw-ink);font-family:Khand,Hind,system-ui,sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;border-radius:0;cursor:pointer}
 .mw-share-float{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50}
 
-/* Jane's Amex Offers: 44px tap targets on Not Interested, readable body */
+/* Mom's Amex Offers: 44px tap targets on Not Interested, readable body */
 .mdis{min-height:44px!important;display:inline-flex!important;align-items:center}
 body{font-size:17px}
 
@@ -191,7 +191,7 @@ body{font-size:17px}
 </head><body>
 <header><div class="hwrap">
  <div class="wordmark">MAX WEBERMAN</div>
- <h1>Jane's Amex Offers</h1>
+ <h1>Mom's Amex Offers</h1>
  <div class="status"><span id="status">Loading Offers…</span> · <span class="remind">💳 <b>Add to Card</b> in the Amex app first</span></div>
 </div></header>
 
@@ -220,7 +220,7 @@ body{font-size:17px}
 <div class="toast" id="toast"></div>
 
 <script>
-/* ===== Jane's preferences (from her Shopping Quiz, Oct 10 2026). Edit here if her answers change. ===== */
+/* ===== Mom's preferences (from her Shopping Quiz, Oct 10 2026). Edit here if her answers change. ===== */
 const YES_BRANDS=["nordstrom","macy's","macys","delta","marriott","hilton","fine hotels","hertz","uber","target","lowe's","lowes","wayfair","whole foods","costco","walmart","disney","hulu","peacock","carter's","pottery barn","lego","best buy","amazon","sephora","ulta","resy","starbucks","cvs","walgreens"];
 const MAYBE_BRANDS=["expedia","clear","williams sonoma","nike","dell"];
 const RELATED={"sam's club":"Like Costco"};
@@ -360,8 +360,8 @@ function badge(){const n=Object.values(S.dec).filter(v=>v!=="no").length,e=$("#n
 function toast(t){const e=$("#toast");e.textContent=t;e.style.opacity=1;clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.opacity=0,1600)}
 $("#share").onclick=async()=>{
  const names=a=>OFFERS.filter(o=>S.dec[o.id]===a).map(o=>o.title);const L=names("love"),Y=names("yes"),M=names("maybe");
- const text=`Jane's Amex Offers (updated ${fmt(ASOF)})`+(L.length+Y.length+M.length?` — My picks: ${L.length} Love, ${Y.length} Yes, ${M.length} Maybe.${L.length||Y.length?` Top: ${[...L,...Y].slice(0,5).join(", ")}`:""}`:""),url=location.href.split("#")[0];
- if(navigator.share){try{await navigator.share({title:"Jane's Amex Offers",text,url});return}catch(e){if(e.name==="AbortError")return}}
+ const text=`Mom's Amex Offers (updated ${fmt(ASOF)})`+(L.length+Y.length+M.length?` — My picks: ${L.length} Love, ${Y.length} Yes, ${M.length} Maybe.${L.length||Y.length?` Top: ${[...L,...Y].slice(0,5).join(", ")}`:""}`:""),url=location.href.split("#")[0];
+ if(navigator.share){try{await navigator.share({title:"Mom's Amex Offers",text,url});return}catch(e){if(e.name==="AbortError")return}}
  if(/iPhone|iPad|Android/i.test(navigator.userAgent)){location.href=`sms:?&body=${encodeURIComponent(text+" "+url)}`;return}
  try{await navigator.clipboard.writeText(text+" "+url);toast("Copied")}catch{toast("Copy: "+url)}};
 Promise.all([fetch("offers.json?v="+Date.now()).then(r=>r.json()),fetch("logos/manifest.json?v="+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,man])=>{
