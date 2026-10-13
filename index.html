@@ -169,6 +169,12 @@ nav.tabbar{flex:none;border-top:1px solid var(--border);background:#fff;padding:
 @media (min-width:900px){:root{--tabh:56px}.rowgrp{margin-top:4px}.row{padding-top:4px}#feed .pad{padding-top:0}header{padding-top:12px;padding-bottom:10px;text-align:center}.hwrap{display:flex;align-items:baseline;justify-content:center;gap:16px;flex-wrap:wrap}.hwrap h1{order:-1}.deck{max-width:420px}}
 @media (max-height:700px){.act .c{width:50px;height:50px}.act.big .c{width:56px;height:56px}.act.small .c{width:40px;height:40px}.hero .initial{font-size:130px}}
 @media (prefers-reduced-motion:reduce){.card.anim,.card.back1,.card.back2{transition:none}.tab svg{transition:none}}
+.mwfoot{text-align:center;color:#737373;font-size:14px;margin:28px 0 12px}.mwfoot a{color:#0a0a0a;text-decoration:none;border-bottom:1px solid rgba(10,10,10,.3)}
+.submitbox{margin:26px 0 8px;padding:18px;border:2px solid #171717;border-radius:16px;background:#fff;text-align:center}.submitbox h2{margin:0 0 4px}
+.subbtn{width:100%;min-height:60px;border:2px solid #171717;background:#171717;color:#fafafa;font:700 18px Khand,Hind,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .18s}
+.subbtn:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 6px 18px rgba(10,10,10,.12)}.subbtn:disabled{opacity:.7}
+.sent{margin-top:10px;font-weight:600;color:#1F7A50;min-height:1.2em}.sent.err{color:#b42318}
+.clk{width:14px;height:14px;vertical-align:-2px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
 </style>
 <!--mw-polish--><style id="mw-polish">
 /* MW polish layer: /workspace/ops/brand/app-polish-spec.md (Oct 10, 2026). Light mode, brand motion, 44px targets. */
@@ -188,16 +194,24 @@ html{color-scheme:light only}
 body{font-size:17px}
 
 </style><!--/mw-polish-->
+<script id="mw-submit">/* Submit to owning agent (Miles Agent). Relay: ntfy.sh topic, archived on the box by /workspace/miles/submissions/collect.py */
+window.MW_SUBMIT=async function(app,payload){
+ const rec={app:app,owner:"Miles Agent",submittedAt:new Date().toISOString(),page:location.href.split("#")[0],ua:navigator.userAgent,results:payload};
+ const body=JSON.stringify(rec);
+ try{const k="mw-submit-backup:"+app,a=JSON.parse(localStorage.getItem(k)||"[]");a.push(rec);localStorage.setItem(k,JSON.stringify(a.slice(-20)))}catch(e){}
+ const r=await fetch("https://ntfy.sh/miles-agent-sub-dbd28e3e58043ca06dd2",{method:"POST",body:body});
+ if(!r.ok)throw new Error("HTTP "+r.status);return rec};
+</script>
 </head><body>
 <header><div class="hwrap">
  <div class="wordmark">MAX WEBERMAN</div>
  <h1>Mom's Amex Offers</h1>
- <div class="status"><span id="status">Loading Offers…</span> · <span class="remind">💳 <b>Add to Card</b> in the Amex app first</span></div>
+ <div class="status"><span id="status">Loading Offers…</span> · <span class="remind"><svg class="clk" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg> <b>Add to Card</b> in the Amex app first</span></div>
 </div></header>
 
 <section class="screen on" id="feed" aria-label="For You"><div class="scroll" id="feedscroll"><div class="pad"><div class="wrap">
   <div id="feedv"></div>
-</div></div></div></section>
+</div><p class="mwfoot">Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></p></div></div></section>
 
 <section class="screen" id="search" aria-label="Search"><div class="scroll"><div class="pad"><div class="wrap">
  <div class="searchbar">
@@ -207,9 +221,9 @@ body{font-size:17px}
   <div class="chips" id="chips"></div>
  </div>
  <div id="res"></div>
-</div></div></div></section>
+</div><p class="mwfoot">Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></p></div></div></section>
 
-<section class="screen" id="saved" aria-label="Saved"><div class="scroll"><div class="pad"><div class="wrap" id="savedv"></div></div></div></section>
+<section class="screen" id="saved" aria-label="Saved"><div class="scroll"><div class="pad"><div class="wrap" id="savedv"></div><p class="mwfoot">Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></p></div></div></section>
 
 <nav class="tabbar"><div class="tabs" role="tablist">
  <button class="tab" role="tab" data-t="feed" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6"/></svg>For You</button>
@@ -230,7 +244,7 @@ const NO_CATEGORIES=["Fitness","Pets","Food Delivery"];
 const CAT_RANK={Travel:1,Home:2,Groceries:3,Streaming:3,Kids:3,Fashion:4,Electronics:4,Beauty:5,Dining:5,Pharmacy:5};
 const SOON_DAYS=7;
 /* Card header look per category (soft tints, proposal) */
-const CAT_LOOK={Travel:["#E6F0F8","#F6F1E7","✈️"],Home:["#F3ECE2","#FAF8F4","🏠"],Groceries:["#E8F3E6","#F7F6EE","🛒"],Streaming:["#ECE9F7","#F7F5FB","📺"],Kids:["#FBF3D6","#FBF8EE","🧸"],Fashion:["#F6ECF3","#FBF7F4","👜"],Electronics:["#E9EDF2","#F7F8FA","💻"],Beauty:["#FBE9EF","#FCF6F4","💄"],Dining:["#FBEDE1","#FCF8F2","🍽️"],Pharmacy:["#E6F3F3","#F6FAF9","💊"],Pets:["#F5EEE2","#FAF7F1","🐾"],Fitness:["#E5F3EF","#F5FAF8","🏃"],Other:["#EFEFEC","#F9F9F7","🏷️"]};
+const CAT_LOOK={Travel:["#E6F0F8","#F6F1E7",""],Home:["#F3ECE2","#FAF8F4",""],Groceries:["#E8F3E6","#F7F6EE",""],Streaming:["#ECE9F7","#F7F5FB",""],Kids:["#FBF3D6","#FBF8EE",""],Fashion:["#F6ECF3","#FBF7F4",""],Electronics:["#E9EDF2","#F7F8FA",""],Beauty:["#FBE9EF","#FCF6F4",""],Dining:["#FBEDE1","#FCF8F2",""],Pharmacy:["#E6F3F3","#F6FAF9",""],Pets:["#F5EEE2","#FAF7F1",""],Fitness:["#E5F3EF","#F5FAF8",""],Other:["#EFEFEC","#F9F9F7",""]};
 /* ====================================================================================================== */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -278,7 +292,7 @@ const whenTxt=o=>!o.exp?"End date not listed":o.days<0?"Expired":o.days===0?"End
 const heartSVG=`<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>`;
 const isSaved=id=>["yes","love","maybe"].includes(S.dec[id]);
 function heroHTML(o){const L=CAT_LOOK[o.category]||CAT_LOOK.Other;
- const b=[o.soon?`<span class="badge soon">⏰ Ending Soon</span>`:"",o.why?`<span class="badge ${o.tier===9?"no":"yes"}">${esc(o.why)}</span>`:""].join("");
+ const b=[o.soon?`<span class="badge soon"><svg class="clk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Ending Soon</span>`:"",o.why?`<span class="badge ${o.tier===9?"no":"yes"}">${esc(o.why)}</span>`:""].join("");
  return `<div class="hero" style="background:linear-gradient(150deg,${L[0]} 0%,${L[1]} 100%)"><div class="initial">${esc(o.initial)}</div>
  <div class="badges">${b}</div><button class="heart${S.dec[o.id]==="love"||isSaved(o.id)?" on":""}" data-heart="${o.id}" aria-label="Save">${heartSVG}</button>
  <div class="nm">${LOGOS[o.id]?`<div class="logo"><img src="${LOGOS[o.id]}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.outerHTML='<div class=&quot;logo ini&quot;>${esc(o.initial)}</div>'"></div>`:`<div class="logo ini" aria-hidden="true">${esc(o.initial)}</div>`}<div class="name">${esc(o.title)}${o.subtitle?`<small>${esc(o.subtitle)}</small>`:""}</div></div></div>`}
@@ -295,7 +309,7 @@ function mini(o){const L=CAT_LOOK[o.category]||CAT_LOOK.Other,canDis=!protectedO
   <button class="heart sm${isSaved(o.id)?" on":""}" data-heart="${o.id}" aria-label="Save ${esc(o.title)}">${heartSVG}</button></div>
  <div class="mbody"><div class="mval">${esc(o.val)}</div>
   ${o.trunc||o.val==="See Offer"?`<div class="mcond unk">Looks like there's a deal — log into Amex to check it out.</div>`:`<div class="mcond">${esc(o.cond)}</div>`}
-  <div class="mfoot"><span class="${o.soon?"soon":""}">${o.soon?"⏰ ":""}${whenTxt(o)}</span>${canDis?`<button class="mdis" data-dismiss="${o.id}" aria-label="Not interested in ${esc(o.title)}">Not Interested</button>`:""}</div></div></article>`}
+  <div class="mfoot"><span class="${o.soon?"soon":""}">${o.soon?'<svg class="clk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ':""}${whenTxt(o)}</span>${canDis?`<button class="mdis" data-dismiss="${o.id}" aria-label="Not interested in ${esc(o.title)}">Not Interested</button>`:""}</div></div></article>`}
 function row(h,l,dot){return l.length?`<section class="group rowgrp"><div class="sec">${dot?`<span class="dot" style="background:${dot}"></span>`:""}<h2>${h}</h2><span class="cnt">${l.length} ${l.length===1?"offer":"offers"}</span>
  <span class="arrows"><button class="arr" data-dir="-1" aria-label="Scroll left">‹</button><button class="arr" data-dir="1" aria-label="Scroll right">›</button></span></div>
  <div class="row">${l.map(mini).join("")}</div></section>`:""}
@@ -346,6 +360,13 @@ function renderSaved(){
   (no.length?`<details class="dismissed"><summary>Not Interested <span class="tip" style="font-family:var(--fb);font-size:15px;font-weight:400">(${no.length})</span></summary>
   <div class="lrow" style="margin:4px 0 6px"><button class="tbtn mw-hover" id="allback">Bring All Back</button></div>
   ${no.map(o=>`<div class="drow"><div class="t"><b>${esc(o.title)}</b><span>${esc(o.val)} · ${whenTxt(o)}</span></div><button class="tbtn ghost mw-hover" data-back="${o.id}">Bring Back</button></div>`).join("")}</details>`:"");
+ {const L=love.length,Y=yes.length,M=maybe.length,N=no.length;
+  $("#savedv").insertAdjacentHTML("beforeend",`<div class="submitbox"><h2>Send Picks To Max's Agent</h2><p class="tip" style="margin:0 0 12px">${L} Love · ${Y} Yes · ${M} Maybe · ${N} Not Interested. One tap, no copying.</p><button class="subbtn" id="submit">${S.sentAt?"Send Again":"Submit"}</button><div class="sent" id="sent" aria-live="polite">${S.sentAt?"Sent "+new Date(S.sentAt).toLocaleString():""}</div></div>`);
+  $("#submit").onclick=async()=>{const b=$("#submit"),m=$("#sent");b.disabled=true;b.textContent="Sending...";m.className="sent";m.textContent="";
+   const pick=a=>OFFERS.filter(o=>S.dec[o.id]===a).map(o=>({id:o.id,title:o.title,value:o.val,expires:whenTxt(o)}));
+   try{await MW_SUBMIT("moms-amex-offers",{offersAsOf:ASOF?fmt(ASOF):null,love:pick("love"),yes:pick("yes"),maybe:pick("maybe"),notInterested:pick("no")});
+    S.sentAt=Date.now();save();b.textContent="Sent";m.textContent="Sent to Max's agent. A copy is saved on this phone.";toast("Sent")}
+   catch(e){b.disabled=false;b.textContent="Try Again";m.className="sent err";m.textContent="Could not send. Check the connection and tap Try Again."}}}
  arrows();
  $$("[data-back]").forEach(b=>b.onclick=()=>{delete S.dec[b.dataset.back];S.hist=S.hist.filter(x=>x!==b.dataset.back);save();renderSaved();toast("Back in For You")});
  const ab=$("#allback");if(ab)ab.onclick=()=>{no.forEach(o=>delete S.dec[o.id]);S.hist=S.hist.filter(x=>S.dec[x]);save();renderSaved();toast("All back in For You")};
