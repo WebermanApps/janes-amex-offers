@@ -203,6 +203,7 @@ window.MW_SUBMIT=async function(app,payload){
  const r=await fetch("https://ntfy.sh/miles-agent-sub-dbd28e3e58043ca06dd2",{method:"POST",body:body});
  if(!r.ok)throw new Error("HTTP "+r.status);return rec};
 </script>
+<script src="ptr.js" defer></script>
 </head><body>
 <header><div class="hwrap">
  <a class="dashlink" href="https://webermanapps.github.io/miles-dashboard/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Miles Dashboard</a>
