@@ -195,9 +195,11 @@ html{color-scheme:light only}
 body{font-size:17px}
 
 </style><!--/mw-polish-->
+<script src="submit.js?v=gr1"></script>
 <script id="mw-submit">/* Submit to owning agent (Miles Agent). Relay: ntfy.sh topic, archived on the box by /workspace/miles/submissions/collect.py */
 window.MW_SUBMIT=async function(app,payload){
- const rec={app:app,owner:"Miles Agent",submittedAt:new Date().toISOString(),page:location.href.split("#")[0],ua:navigator.userAgent,results:payload};
+ if(!window.MWSubmit||!(await window.MWSubmit.gate("miles"))){const e=new Error("Password needed");e.pw=true;throw e}
+ const rec={auth:true,authKey:"6df85d68",app:app,owner:"Miles Agent",submittedAt:new Date().toISOString(),page:location.href.split("#")[0],ua:navigator.userAgent,results:payload};
  const body=JSON.stringify(rec);
  try{const k="mw-submit-backup:"+app,a=JSON.parse(localStorage.getItem(k)||"[]");a.push(rec);localStorage.setItem(k,JSON.stringify(a.slice(-20)))}catch(e){}
  const r=await fetch("https://ntfy.sh/miles-agent-sub-dbd28e3e58043ca06dd2",{method:"POST",body:body});
@@ -369,7 +371,7 @@ function renderSaved(){
    const pick=a=>OFFERS.filter(o=>S.dec[o.id]===a).map(o=>({id:o.id,title:o.title,value:o.val,expires:whenTxt(o)}));
    try{await MW_SUBMIT("moms-amex-offers",{offersAsOf:ASOF?fmt(ASOF):null,love:pick("love"),yes:pick("yes"),maybe:pick("maybe"),notInterested:pick("no")});
     S.sentAt=Date.now();save();b.textContent="Sent";m.textContent="Sent to Max's agent. A copy is saved on this phone.";toast("Sent")}
-   catch(e){b.disabled=false;b.textContent="Try Again";m.className="sent err";m.textContent="Could not send. Check the connection and tap Try Again."}}}
+   catch(e){b.disabled=false;b.textContent="Try Again";m.className="sent err";m.textContent=e&&e.pw?"Password needed. Nothing was sent.":"Could not send. Check the connection and tap Try Again."}}}
  arrows();
  $$("[data-back]").forEach(b=>b.onclick=()=>{delete S.dec[b.dataset.back];S.hist=S.hist.filter(x=>x!==b.dataset.back);save();renderSaved();toast("Back in For You")});
  const ab=$("#allback");if(ab)ab.onclick=()=>{no.forEach(o=>delete S.dec[o.id]);S.hist=S.hist.filter(x=>S.dec[x]);save();renderSaved();toast("All back in For You")};
