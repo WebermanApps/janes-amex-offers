@@ -5,6 +5,7 @@
 <title>Mom's Amex Offers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Khand:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://webermanapps.github.io/style-swipe/kit/dash-theme.css?v=cc7">
 <style>
 :root{color-scheme:light;--bg:#fff;--fg:#0a0a0a;--primary:#171717;--sec:#f5f5f5;--muted:#737373;--border:#e5e5e5;--fh:"Khand",sans-serif;--fb:"Hind",system-ui,sans-serif;--track:.1em;
 --love:#E0245E;--yes:#2E9E6A;--maybe:#D99A1E;--maybe-t:#A36F0C;--no:#9A7B7B;--cream:#FAF8F4;--ease:cubic-bezier(.2,.8,.2,1);--dur:180ms;--tabh:64px}
@@ -194,6 +195,35 @@ html{color-scheme:light only}
 .mdis{min-height:44px!important;display:inline-flex!important;align-items:center}
 body{font-size:17px}
 
+/* Oct 15 polish: brand colors, square corners, Ends Soon side menu (pick 033) */
+:root{--cream:#FAF6EE;--border:#e3ddd2;--mw-section-gap:22px;--mw-divider:#e3ddd2}
+html,body,body{font-size:18px}
+.card,.listing,.mini,.group,.none,.remind-bar,.submitbox,.done,.logo,.logo img,.chip,.sb input,.badge,.toast,.arr{border-radius:0!important}
+.listing,.mini,.logo,.arr{border-color:#e3ddd2}
+.group{background:#fff;border-color:#e3ddd2}
+.mcond,.cond,.facts,.mfoot,.count,.tip,.status{font-size:16px}
+.rowgrp .sec h2{font-size:26px}.mname{font-size:21px}.mval{font-size:28px}
+.mdis{font-size:13px}
+.chip{min-height:44px;font-size:16px}
+.tab{font-size:13px}
+.toast{font-size:17px}.toast .linkbtn{background:#171717;color:#fff;text-decoration:none;padding:0 16px;margin-left:10px}
+.mfoot .soon,.facts .soon{color:var(--mw-jungle)}
+.badge.soon{background:#E6F2EC;color:var(--mw-jungle)}
+.feedgrid{display:grid;grid-template-columns:1fr;gap:16px}
+.soonbox{border:1px solid #e3ddd2;border-left:6px solid var(--mw-jungle);background:#FAF6EE;margin-top:8px}
+.soonbox summary{list-style:none;min-height:52px;display:flex;align-items:center;gap:10px;padding:0 14px;cursor:pointer;font-family:var(--fh);font-weight:700;font-size:24px;color:var(--mw-jungle)}
+.soonbox summary::-webkit-details-marker{display:none}
+.soonbox summary .n{font-family:var(--fb);font-weight:600;font-size:15px;color:#fff;background:var(--mw-jungle);padding:2px 9px}
+.soonbox summary .hint{margin-left:auto;font-family:var(--fb);font-weight:400;font-size:15px;color:#737373}
+.soonbox summary .hint::after{content:"Tap to Show"}.soonbox[open] summary .hint::after{content:"Tap to Hide"}
+.soonlist{list-style:none;margin:0;padding:0 14px 8px}
+.soonlist li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:10px 0;border-top:1px solid #e3ddd2;min-height:44px}
+.soonlist b{font-family:var(--fh);font-size:20px;line-height:1.1}.soonlist .v{font-size:16px;color:#0a0a0a;white-space:nowrap}
+.soonlist .w{display:block;font-size:15px;color:var(--mw-jungle);font-weight:600}
+@media (min-width:900px){.feedgrid{grid-template-columns:300px minmax(0,1fr);gap:28px;align-items:start}.soonbox{position:sticky;top:8px;margin-top:6px}.soonbox summary{cursor:default;pointer-events:none}.soonbox summary .hint{display:none}.wrap{max-width:1400px}}
+.mw-footer{text-align:center;color:#737373;font-size:16px}
+.mw-footer .mw-share{min-height:48px;padding:0 22px;font-size:15px;display:block;margin:0 auto 14px}
+.mw-footer a{color:#0a0a0a}
 </style><!--/mw-polish-->
 <script src="submit.js?v=gr1"></script>
 <script id="mw-submit">/* Submit to owning agent (Miles Agent). Relay: ntfy.sh topic, archived on the box by /workspace/miles/submissions/collect.py */
@@ -215,8 +245,8 @@ window.MW_SUBMIT=async function(app,payload){
 </div></header>
 
 <section class="screen on" id="feed" aria-label="For You"><div class="scroll" id="feedscroll"><div class="pad"><div class="wrap">
-  <div id="feedv"></div>
-</div><p class="mwfoot">Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></p></div></div></section>
+  <div class="feedgrid"><aside id="soonv" aria-label="Ends Soon"></aside><div id="feedv" class="mw-sections"></div></div>
+</div><footer class="mw-footer"><button class="mw-share sharebtn">Share This Page</button>Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer></div></div></section>
 
 <section class="screen" id="search" aria-label="Search"><div class="scroll"><div class="pad"><div class="wrap">
  <div class="searchbar">
@@ -226,9 +256,9 @@ window.MW_SUBMIT=async function(app,payload){
   <div class="chips" id="chips"></div>
  </div>
  <div id="res"></div>
-</div><p class="mwfoot">Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></p></div></div></section>
+</div><footer class="mw-footer"><button class="mw-share sharebtn">Share This Page</button>Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer></div></div></section>
 
-<section class="screen" id="saved" aria-label="Saved"><div class="scroll"><div class="pad"><div class="wrap" id="savedv"></div><p class="mwfoot">Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></p></div></div></section>
+<section class="screen" id="saved" aria-label="Saved"><div class="scroll"><div class="pad"><div class="wrap" id="savedv"></div><footer class="mw-footer"><button class="mw-share sharebtn">Share This Page</button>Built by <a href="https://maxweberman.com" target="_blank" rel="noopener">Max Weberman</a></footer></div></div></section>
 
 <nav class="tabbar"><div class="tabs" role="tablist">
  <button class="tab" role="tab" data-t="feed" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6"/></svg>For You</button>
@@ -315,7 +345,7 @@ function mini(o){const L=CAT_LOOK[o.category]||CAT_LOOK.Other,canDis=!protectedO
  <div class="mbody"><div class="mval">${esc(o.val)}</div>
   ${o.trunc||o.val==="See Offer"?`<div class="mcond unk">Looks like there's a deal — log into Amex to check it out.</div>`:`<div class="mcond">${esc(o.cond)}</div>`}
   <div class="mfoot"><span class="${o.soon?"soon":""}">${o.soon?'<svg class="clk" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ':""}${whenTxt(o)}</span>${canDis?`<button class="mdis" data-dismiss="${o.id}" aria-label="Not interested in ${esc(o.title)}">Not Interested</button>`:""}</div></div></article>`}
-function row(h,l,dot){return l.length?`<section class="group rowgrp"><div class="sec">${dot?`<span class="dot" style="background:${dot}"></span>`:""}<h2>${h}</h2><span class="cnt">${l.length} ${l.length===1?"offer":"offers"}</span>
+function row(h,l,dot){return l.length?`<section class="group rowgrp mw-block"><div class="sec">${dot?`<span class="dot" style="background:${dot}"></span>`:""}<h2>${h}</h2><span class="cnt">${l.length} ${l.length===1?"offer":"offers"}</span>
  <span class="arrows"><button class="arr" data-dir="-1" aria-label="Scroll left">‹</button><button class="arr" data-dir="1" aria-label="Scroll right">›</button></span></div>
  <div class="row">${l.map(mini).join("")}</div></section>`:""}
 function renderFeed(){
@@ -325,6 +355,9 @@ function renderFeed(){
  const keep={};$$("#feedv .row").forEach((r,i)=>keep[i]=r.scrollLeft);
  $("#feedv").innerHTML=row("Your Brands",t1)+row("Picked For You",t2)+row("More Offers",t3)+
   (nNo?`<p class="tip hidnote">${nNo} hidden · <button class="linkbtn mw-hover" onclick="go('saved')">Bring Back</button></p>`:"");
+ {const sl=OFFERS.filter(o=>o.soon&&(protectedOffer(o)||S.dec[o.id]!=="no")).sort(byExp),was=$("#soonv details");
+  const op=was?was.open:innerWidth>=900;
+  $("#soonv").innerHTML=sl.length?`<details class="soonbox"${op||innerWidth>=900?" open":""}><summary>Ends Soon <span class="n">${sl.length}</span><span class="hint"></span></summary><ul class="soonlist">${sl.map(o=>`<li><span><b>${esc(o.title)}</b><span class="w">${whenTxt(o)}</span></span><span class="v">${esc(o.val)}</span></li>`).join("")}</ul></details>`:""}
  $$("#feedv .row").forEach((r,i)=>{if(keep[i])r.scrollLeft=keep[i]});arrows();
 }
 function arrows(){$$(".rowgrp").forEach(g=>{const r=g.querySelector(".row"),[l,rt]=g.querySelectorAll(".arr");const upd=()=>{l.disabled=r.scrollLeft<4;rt.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4};upd();r.onscroll=upd})}
@@ -384,12 +417,13 @@ $$(".tab[data-t]").forEach(b=>b.onclick=()=>go(b.dataset.t));
 function badge(){const n=Object.values(S.dec).filter(v=>v!=="no").length,e=$("#nsaved");e.hidden=!n;e.textContent=n;
  if(ASOF)$("#status").innerHTML=`<span class="dot"></span>Updated ${fmt(ASOF)}${n?` · ${n} saved`:""}`}
 function toast(t){const e=$("#toast");e.textContent=t;e.style.opacity=1;clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.opacity=0,1600)}
-$("#share").onclick=async()=>{
+const shareNow=async()=>{
  const names=a=>OFFERS.filter(o=>S.dec[o.id]===a).map(o=>o.title);const L=names("love"),Y=names("yes"),M=names("maybe");
  const text=`Mom's Amex Offers (updated ${fmt(ASOF)})`+(L.length+Y.length+M.length?` — My picks: ${L.length} Love, ${Y.length} Yes, ${M.length} Maybe.${L.length||Y.length?` Top: ${[...L,...Y].slice(0,5).join(", ")}`:""}`:""),url=location.href.split("#")[0];
  if(navigator.share){try{await navigator.share({title:"Mom's Amex Offers",text,url});return}catch(e){if(e.name==="AbortError")return}}
  if(/iPhone|iPad|Android/i.test(navigator.userAgent)){location.href=`sms:?&body=${encodeURIComponent(text+" "+url)}`;return}
  try{await navigator.clipboard.writeText(text+" "+url);toast("Copied")}catch{toast("Copy: "+url)}};
+$$("#share,.sharebtn").forEach(b=>b.onclick=shareNow);
 Promise.all([fetch("offers.json?v="+Date.now()).then(r=>r.json()),fetch("logos/manifest.json?v="+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,man])=>{
  for(const k in man)if(man[k].logo)LOGOS[k]=man[k].logo;
  d=d.filter(o=>o&&o.merchant&&!/upgrade offer|personal loan/i.test(o.merchant));
